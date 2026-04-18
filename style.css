@@ -490,7 +490,7 @@ address {
    ════════════════════════════════════════════════════════════════════════════ */
 .next-event {
   background: var(--lit);
-  margin-top: var(--s8);
+  margin-top: var(--s12);
   /* breathing room below the nav */
   padding: var(--s12) 0;
 }
