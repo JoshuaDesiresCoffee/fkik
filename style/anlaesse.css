@@ -8,7 +8,7 @@
 
     .site-nav--subpage .site-nav__inner {
       justify-content: space-between;
-      padding-inline: var(--s6);
+      padding-inline: var(--s4);
     }
 
     .site-nav__home-link {

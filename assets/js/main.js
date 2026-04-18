@@ -121,4 +121,12 @@ function applyLiturgicalColor() {
 // ─── Boot ────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   applyLiturgicalColor();
+
+  const scrollerEl = document.querySelector('.scroller');
+  if (scrollerEl) {
+    const checkStuck = () => {
+      scrollerEl.classList.toggle('is-stuck', scrollerEl.getBoundingClientRect().top <= 0);
+    };
+    window.addEventListener('scroll', checkStuck, { passive: true });
+  }
 });

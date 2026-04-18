@@ -358,6 +358,24 @@ address {
   position: sticky;
   top: 0;
   background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: var(--s4);
+}
+
+.scroller__brand {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: color var(--dur) var(--ease);
+}
+
+.scroller.is-stuck .scroller__brand {
+  color: var(--ink);
 }
 
 
