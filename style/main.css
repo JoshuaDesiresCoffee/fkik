@@ -378,6 +378,136 @@ address {
   color: var(--ink);
 }
 
+.breadcrumb {
+  padding-bottom: var(--s4);
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  content: "›";
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.breadcrumb__link {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color var(--dur) var(--ease);
+}
+
+.breadcrumb__link:hover,
+.breadcrumb__link:focus-visible {
+  color: #fff;
+}
+
+.breadcrumb__current {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+       SHARED SUBPAGE STYLES
+       ════════════════════════════════════════════════════════════════════════ */
+
+.site-nav--subpage {
+  width: 100%;
+  margin-left: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.site-nav--subpage .site-nav__inner {
+  justify-content: space-between;
+  padding-inline: var(--s4);
+}
+
+.site-nav__home-link {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color var(--dur) var(--ease);
+}
+
+.site-nav__home-link:hover,
+.site-nav__home-link:focus-visible {
+  color: var(--lit);
+}
+
+.site-nav__link[aria-current="page"] {
+  color: var(--lit);
+  position: relative;
+}
+
+.site-nav__link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--s3);
+  right: var(--s3);
+  height: 2px;
+  background: var(--lit);
+}
+
+@media (max-width: 900px) {
+  .site-nav--subpage .site-nav__inner {
+    padding-inline: var(--s4);
+  }
+}
+
+@media (max-width: 600px) {
+  .site-nav--subpage .site-nav__inner {
+    padding-inline: var(--s3);
+  }
+
+  .site-nav__home-link {
+    font-size: var(--text-xs);
+  }
+}
+
+.page-header {
+  background: var(--lit);
+  color: #fff;
+  padding: var(--s8) 0 5rem;
+}
+
+.page-header__title {
+  font-size: clamp(var(--text-xl), 6vw, var(--text-3xl));
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: #fff;
+  margin-bottom: var(--s3);
+}
+
+.page-header__subtitle {
+  font-size: var(--text-md);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  max-width: 50ch;
+}
 
 /* ════════════════════════════════════════════════════════════════════════════
    BUTTONS
@@ -1007,5 +1137,21 @@ address {
   .site-header__image {
     position: static;
     height: 200pt;
+  }
+
+  .page-header {
+    background: none;
+    color: var(--ink);
+    padding: var(--s4) 0;
+  }
+
+  .page-header__title,
+  .page-header__subtitle {
+    color: var(--ink);
+  }
+
+  .breadcrumb__link,
+  .breadcrumb__current {
+    color: var(--ink-muted);
   }
 }
