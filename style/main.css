@@ -45,7 +45,7 @@
 
   /* Nav */
   --nav-h: 4.5rem;
-  --nav-h-sm: 3rem;
+  --nav-h-sm: 4rem;
   --nav-font: var(--text-md);
   --nav-font-sm: var(--text-sm);
 
@@ -236,6 +236,7 @@ address {
 .site-nav__home-link:focus-visible { color: var(--lit); }
 
 .site-nav__list {
+  margin: 1px 0 0 0;
   display: flex;
   align-items: center;
 }
@@ -311,23 +312,34 @@ address {
   }
 
   .site-nav__inner {
+    position: relative;
     height: var(--nav-h-sm);
     padding-inline: var(--s3);
-    flex-wrap: wrap;
   }
 
   .nav-toggle-btn { display: flex; }
 
+  /* Dropdown: absolutely positioned below the bar, slides in via clip-path */
   .site-nav__list {
-    display: none;
-    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    border-top: 1px solid var(--border);
-    padding-block: var(--s1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.25s var(--ease);
   }
 
-  .nav-toggle:checked ~ .site-nav__inner .site-nav__list { display: flex; }
+  .nav-toggle:checked ~ .site-nav__inner .site-nav__list {
+    clip-path: inset(0);
+    pointer-events: auto;
+  }
   .nav-toggle:checked ~ .site-nav__inner .nav-toggle-btn__icon--open { display: none; }
   .nav-toggle:checked ~ .site-nav__inner .nav-toggle-btn__icon--close { display: block; }
 

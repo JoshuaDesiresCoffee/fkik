@@ -310,9 +310,10 @@
   .v4-image {
     width: 100%;
     float: none;
-    height: 60vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
     min-height: auto;
-    max-height: 75vh;
+    max-height: 65vh;
   }
 
   .v4-panel {
