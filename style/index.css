@@ -2,18 +2,26 @@
    INDEX — styles exclusive to the homepage
    ════════════════════════════════════════════════════════════════════════════ */
 
-/* ─── Nav overrides: transparent background, right padding on list ─────── */
-.site-nav {
-  background: transparent;
+/* ─── Desktop: nav sits over the right panel ─────────────────────────── */
+@media (min-width: 769px) {
+  .site-nav {
+    width: var(--panel-w);
+    margin-left: var(--header-w);
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .site-nav__inner {
+    justify-content: flex-end;
+    padding-right: var(--s4);
+    padding-left: 0;
+  }
+
+  .site-nav .site-nav__home-link { display: none; }
+  .site-nav .nav-toggle-btn { display: none; }
 }
 
-.site-nav__list {
-  padding: 0 var(--s4) 0 0;
-}
-
-.is-stuck {
-  border-bottom: 1px solid var(--border);
-}
+.is-stuck { border-bottom: 1px solid var(--border); }
 
 
 /* ════════════════════════════════════════════════════════════════════════════
@@ -294,4 +302,51 @@
     grid-template-columns: 1fr;
     gap: var(--s8);
   }
+}
+
+
+/* ─── Mobile: stacked hero ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .v4-image {
+    width: 100%;
+    float: none;
+    height: 60vw;
+    min-height: auto;
+    max-height: 75vh;
+  }
+
+  .v4-panel {
+    width: 100%;
+    height: auto;
+    background: var(--bg);
+    color: var(--ink);
+    padding: var(--s6) var(--s3) var(--s8);
+    justify-content: flex-start;
+  }
+
+  .v4-panel__year { display: none; }
+
+  .v4-panel__season {
+    color: var(--ink-muted);
+    opacity: 1;
+  }
+
+  .v4-panel__title {
+    font-size: clamp(var(--text-lg), 7vw, var(--text-xl));
+    color: var(--ink);
+  }
+
+  .v4-panel__divider {
+    background: var(--border);
+    opacity: 1;
+  }
+
+  .v4-panel__tagline {
+    color: var(--ink-muted);
+    opacity: 1;
+  }
+
+  .scroller { display: none; }
+
+  .next-event { margin-top: 0; }
 }

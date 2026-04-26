@@ -129,4 +129,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', checkStuck, { passive: true });
   }
+
+  // Nav toggle: sync aria-expanded and close on Escape
+  const navToggle = document.getElementById('nav-toggle');
+  const navBtn    = document.querySelector('.nav-toggle-btn');
+  if (navToggle && navBtn) {
+    navToggle.addEventListener('change', () => {
+      navBtn.setAttribute('aria-expanded', navToggle.checked ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && navToggle.checked) {
+        navToggle.checked = false;
+        navBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 });
