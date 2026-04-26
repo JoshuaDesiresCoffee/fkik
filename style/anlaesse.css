@@ -3,12 +3,13 @@
   padding: var(--s12) 0 var(--s16);
 }
 
-.events-section__header {
+.events-section__header,
+.past-section__header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--s3);
+  gap: var(--s4);
   margin-bottom: var(--s8);
 }
 
@@ -208,15 +209,6 @@
   border-top: 1px solid var(--border);
 }
 
-.past-section__header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--s4);
-  margin-bottom: var(--s8);
-}
-
 .past-toggle-btn {
   display: inline-flex;
   align-items: center;
@@ -346,7 +338,7 @@
 }
 
 .past-event-card__arrow {
-  padding-right: var(--s5);
+  padding-right: var(--s4);
   color: var(--ink-muted);
   opacity: 0.3;
   flex-shrink: 0;

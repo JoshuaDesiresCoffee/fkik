@@ -12,11 +12,6 @@
   padding: 0 0 var(--s16);
 }
 
-.pillars-section .eyebrow {
-  display: block;
-  margin-bottom: var(--s2);
-}
-
 .pillars-section .section-headline {
   margin-bottom: var(--s8);
 }
