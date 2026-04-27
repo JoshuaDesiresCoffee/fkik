@@ -1,3 +1,48 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://www.lutherkirchenmusik-basel.ch/'
+languageCode = 'de'
+defaultContentLanguage = 'de'
+title = 'Förderverein Kirchenmusik in der Karthäuserkirche'
+enableRobotsTXT = true
+buildFuture      = true
+
+[params]
+  orgName        = 'Förderverein Kirchenmusik in der Karthäuserkirche'
+  orgShortName   = 'Förderverein Kirchenmusik Karthäuserkirche'
+  orgAltName     = 'FKIK Basel'
+  description    = 'Der Förderverein Kirchenmusik unterstützt und fördert das Musikleben in der Karthäuserkirche Basel: Konzerte, Kantorei, Orgelmusik und Gemeinschaft seit Jahrzehnten.'
+  ogDescription  = 'Konzerte, Kantorei und Orgelmusik in der Karthäuserkirche Basel. Werden Sie Teil unserer Gemeinschaft.'
+  orgDescription = 'Der Förderverein unterstützt und fördert das kirchenmusikalische Leben in der Karthäuserkirche Basel durch Konzerte, Kantorei und Gemeinschaftspflege.'
+  orgFounding    = '1982'
+  locale         = 'de_CH'
+  inLanguage     = 'de-CH'
+  venueCity      = 'Basel'
+  venueRegion    = 'BS'
+  venueCountry   = 'CH'
+  venueName      = 'Karthäuserkirche Basel'
+  ogImage        = '/media/kantorei.png'
+  ogImageAlt     = 'Chor und Orchester in der Karthäuserkirche Basel'
+  ogImageWidth   = '1200'
+  ogImageHeight  = '630'
+  footerDesc     = 'Wir fördern und unterstützen die kirchenmusikalische Arbeit in der Karthäuserkirche Basel — durch Konzerte, Gemeinschaft und Engagement für eine lebendige Musikkultur.'
+  emailUser      = 'info'
+  emailDomain    = 'lutherkirchenmusik-basel.ch'
+
+[params.membership]
+  einzelmitglied  = 'CHF 40.– / Jahr'
+  paarmitglied    = 'CHF 60.– / Jahr'
+  goennermitglied = 'ab CHF 100.– / Jahr'
+  jugend          = 'CHF 20.– / Jahr (unter 25)'
+  iban            = 'CH00 0000 0000 0000 0000 0'
+  beguenstigter   = 'Förderverein Kirchenmusik in der Karthäuserkirche'
+  bank            = ''
+  vermerk         = 'Spende Kirchenmusik'
+
+[languages]
+  [languages.de]
+    languageName = 'Deutsch'
+    weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

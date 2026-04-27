@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": {{ printf "Über uns — %s" $.Site.Params.orgShortName | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "description": {{ .Params.description | default $.Site.Params.description | jsonify }},
+  "isPartOf": {
+    "@id": {{ printf "%s#website" $.Site.BaseURL | jsonify }}
+  },
+  "about": {
+    "@id": {{ printf "%s#organization" $.Site.BaseURL | jsonify }}
+  }
+}
+</script>

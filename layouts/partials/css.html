@@ -1,0 +1,20 @@
+{{- $main := resources.Get "css/main.css" | fingerprint -}}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}" crossorigin="anonymous">
+{{- if .IsHome }}
+{{- $css := resources.Get "css/index.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- else if eq .Section "anlaesse" }}
+  {{- if .IsSection }}
+  {{- $css := resources.Get "css/anlaesse.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  {{- else }}
+  {{- $css := resources.Get "css/anlass.css" | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  {{- end }}
+{{- else if eq .Section "ueber-uns" }}
+{{- $css := resources.Get "css/ueber-uns.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- else if eq .Section "kontakt" }}
+{{- $css := resources.Get "css/kontakt.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- end }}

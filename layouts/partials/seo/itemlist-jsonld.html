@@ -1,0 +1,42 @@
+{{- /* Expects . = the anlaesse section Page */ -}}
+{{- $upcoming := where .Pages "Date" "ge" now -}}
+{{- $upcoming = sort $upcoming "Date" -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ printf "Kommende Anlässe des %s" .Site.Params.orgShortName | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "itemListElement": [
+    {{ range $i, $ev := $upcoming }}{{ if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "item": {
+        "@type": "Event",
+        "name": {{ $ev.Title | jsonify }},
+        "description": {{ $ev.Params.description | jsonify }},
+        "startDate": {{ $ev.Params.eventDatetime | jsonify }},
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": {{ $ev.Params.locationName | default $.Site.Params.venueName | jsonify }},
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": {{ $.Site.Params.venueCity | jsonify }},
+            "addressCountry": {{ $.Site.Params.venueCountry | jsonify }}
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "@id": {{ printf "%s#organization" $.Site.BaseURL | jsonify }}
+        },
+        "url": {{ $ev.Permalink | jsonify }},
+        "inLanguage": {{ $.Site.Params.inLanguage | jsonify }}
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>

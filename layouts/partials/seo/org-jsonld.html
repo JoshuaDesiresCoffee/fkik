@@ -1,0 +1,29 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "NGO"],
+  "@id": {{ printf "%s#organization" $.Site.BaseURL | jsonify }},
+  "name": {{ $.Site.Params.orgName | jsonify }},
+  "alternateName": {{ $.Site.Params.orgAltName | jsonify }},
+  "url": {{ $.Site.BaseURL | strings.TrimRight "/" | jsonify }},
+  "logo": {
+    "@type": "ImageObject",
+    "url": {{ printf "%smedia/kantorei.png" $.Site.BaseURL | jsonify }}
+  },
+  "description": {{ $.Site.Params.orgDescription | jsonify }},
+  "foundingDate": {{ $.Site.Params.orgFounding | jsonify }},
+  "email": {{ printf "%s@%s" $.Site.Params.emailUser $.Site.Params.emailDomain | jsonify }},
+  "location": {
+    "@type": "Place",
+    "name": {{ $.Site.Params.venueName | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": {{ $.Site.Params.venueCity | jsonify }},
+      "addressRegion": {{ $.Site.Params.venueRegion | jsonify }},
+      "addressCountry": {{ $.Site.Params.venueCountry | jsonify }}
+    }
+  },
+  "knowsAbout": ["Kirchenmusik", "Chor", "Orgelmusik", "Konzerte", "Gottesdienste"],
+  "inLanguage": {{ $.Site.Params.inLanguage | jsonify }}
+}
+</script>

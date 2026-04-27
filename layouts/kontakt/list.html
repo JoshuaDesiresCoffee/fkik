@@ -1,0 +1,201 @@
+{{ define "page-header" }}
+{{- $crumbs := slice
+  (dict "name" "Startseite" "url" "/" "current" false)
+  (dict "name" .Title       "url" "" "current" true)
+-}}
+{{ partial "page-header.html" (dict
+  "breadcrumbs" $crumbs
+  "title"       .Title
+  "subtitle"    .Params.pageSubtitle
+  "page"        .
+) }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="kontakt-section" aria-labelledby="email-heading">
+    <div class="container">
+      <div class="kontakt-cols">
+
+        <div class="contact-block">
+          <svg class="contact-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          <span class="contact-block__label">E-Mail</span>
+          <h2 id="email-heading" class="contact-block__title">Schreiben Sie uns</h2>
+          <div class="contact-block__body">
+            <p>
+              Für Fragen zu Konzerten, zur Mitgliedschaft oder zum Verein steht
+              Ihnen unser Vorstand gerne zur Verfügung. Wir antworten in der Regel
+              innerhalb weniger Werktage.
+            </p>
+            <p>
+              <noscript>
+                <span class="email-fallback">
+                  E-Mail: {{ $.Site.Params.emailUser }} [at] {{ $.Site.Params.emailDomain }}<br>
+                  (Bitte [at] durch @ ersetzen)
+                </span>
+              </noscript>
+              <a href="#"
+                 class="js-email"
+                 data-u="{{ $.Site.Params.emailUser }}"
+                 data-d="{{ $.Site.Params.emailDomain }}"
+                 aria-label="E-Mail an {{ $.Site.Params.emailUser }} at {{ $.Site.Params.emailDomain }} senden"
+              >{{ $.Site.Params.emailUser }} [at] {{ $.Site.Params.emailDomain }}</a>
+            </p>
+          </div>
+        </div>
+
+        <aside class="info-card" aria-label="Hinweis">
+          <p class="info-card__title">Hinweis</p>
+          <div class="info-card__body">
+            <p>
+              Der Vorstand ist ehrenamtlich tätig. Wir bitten um etwas Geduld
+              bei Anfragen — insbesondere rund um die grossen Konzerttermine.
+            </p>
+            <p>
+              Für dringende Anfragen zu Veranstaltungen empfehlen wir
+              einen Blick auf unsere <a href="{{ "/anlaesse/" | relURL }}" style="color:var(--lit);font-weight:600;">Anlässeseite</a>.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="kontakt-section kontakt-section--warm" aria-labelledby="mitglied-heading">
+    <div class="container">
+      <header class="kontakt-section__header">
+        <span class="eyebrow">Mitmachen</span>
+        <h2 id="mitglied-heading" class="section-headline">Mitglied werden</h2>
+      </header>
+      <div class="kontakt-cols">
+        <div>
+          <p style="font-size:var(--text-md);color:var(--ink-muted);line-height:1.7;margin-bottom:var(--s6);max-width:54ch;">
+            Mitglied zu werden ist einfach und unkompliziert. Ihr Beitrag fliesst
+            direkt in Konzerte, Noten, Instrumente und die Förderung der Kantorei.
+          </p>
+          <ol class="steps-list" aria-label="Schritte zur Mitgliedschaft">
+            <li class="steps-list__item">
+              <span class="steps-list__num" aria-hidden="true"></span>
+              <p class="steps-list__text">
+                <strong>Talon herunterladen</strong> — Laden Sie unsere Beitrittserklärung
+                als PDF herunter.
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <span class="steps-list__num" aria-hidden="true"></span>
+              <p class="steps-list__text">
+                <strong>Ausfüllen &amp; unterschreiben</strong> — Tragen Sie Ihre
+                Angaben ein und unterschreiben Sie den Talon.
+              </p>
+            </li>
+            <li class="steps-list__item">
+              <span class="steps-list__num" aria-hidden="true"></span>
+              <p class="steps-list__text">
+                <strong>Einsenden oder E-Mail</strong> — Senden Sie den ausgefüllten
+                Talon per Post oder scannen Sie ihn ein und schicken Sie ihn per E-Mail.
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:var(--s5);">
+          <a href="{{ "media/beitrittstalon.pdf" | relURL }}"
+             class="download-btn"
+             download
+             aria-label="Beitrittserklärung als PDF herunterladen">
+            <svg class="download-btn__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Beitrittserklärung (PDF)
+          </a>
+
+          <div class="info-card info-card--on-warm" aria-label="Mitgliederbeitrag">
+            <p class="info-card__title">Mitgliederbeitrag</p>
+            <div class="info-card__body">
+              <p>
+                <strong>Einzelmitglied:</strong> {{ $.Site.Params.membership.einzelmitglied }}<br>
+                <strong>Paarmitglied:</strong> {{ $.Site.Params.membership.paarmitglied }}<br>
+                <strong>Gönnermitglied:</strong> {{ $.Site.Params.membership.goennermitglied }}
+              </p>
+              <p style="margin-top:var(--s2);">
+                Studierende und Jugendliche: {{ $.Site.Params.membership.jugend }}.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kontakt-section" aria-labelledby="spenden-heading">
+    <div class="container">
+      <header class="kontakt-section__header">
+        <span class="eyebrow">Unterstützen Sie uns</span>
+        <h2 id="spenden-heading" class="section-headline">Spenden &amp; Adresse</h2>
+      </header>
+      <div class="kontakt-cols">
+
+        <div class="contact-block">
+          <svg class="contact-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+            <line x1="1" y1="10" x2="23" y2="10"></line>
+          </svg>
+          <span class="contact-block__label">Bankverbindung</span>
+          <h3 class="contact-block__title" style="font-size:var(--text-md);">Jede Spende zählt</h3>
+          <div class="contact-block__body">
+            <p>
+              Auch ohne Mitgliedschaft können Sie unsere Arbeit mit einer Spende
+              unterstützen. Jeder Betrag hilft, Kirchenmusik in Basel lebendig zu halten.
+            </p>
+          </div>
+          <div class="iban-box">
+            <p class="iban-label">IBAN</p>
+            <p class="iban-number">{{ $.Site.Params.membership.iban }}</p>
+            <dl class="iban-meta">
+              <dt>Begünstigter:</dt>
+              <dd>{{ $.Site.Params.membership.beguenstigter }}</dd>
+              {{ with $.Site.Params.membership.bank }}
+              <dt>Bank:</dt>
+              <dd>{{ . }}</dd>
+              {{ end }}
+              <dt>Vermerk:</dt>
+              <dd>{{ $.Site.Params.membership.vermerk }}</dd>
+            </dl>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <svg class="contact-block__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="contact-block__label">Postadresse</span>
+          <h3 class="contact-block__title" style="font-size:var(--text-md);">Wo wir zu finden sind</h3>
+          <div class="contact-block__body">
+            <p>
+              Unsere Veranstaltungen finden in der Karthäuserkirche statt.
+              Den Vorstand erreichen Sie am zuverlässigsten per E-Mail.
+            </p>
+          </div>
+          <div class="iban-box" style="border-left-color:var(--border);">
+            <address style="font-style:normal;font-size:var(--text-base);color:var(--ink);line-height:1.8;">
+              {{ $.Site.Params.orgName }}<br>
+              {{ $.Site.Params.venueName }}<br>
+              Basel
+            </address>
+          </div>
+          <p style="margin-top:var(--s4);font-size:var(--text-sm);color:var(--ink-muted);line-height:1.65;">
+            Die Karthäuserkirche ist mit dem ÖV gut erreichbar.
+            Eine Wegbeschreibung erhalten Sie auf Anfrage per E-Mail.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+{{ end }}

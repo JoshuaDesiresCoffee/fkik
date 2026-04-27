@@ -1,0 +1,12 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": {{ printf "Kontakt — %s" $.Site.Params.orgShortName | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "description": {{ .Params.description | default $.Site.Params.description | jsonify }},
+  "isPartOf": {
+    "@id": {{ printf "%s#website" $.Site.BaseURL | jsonify }}
+  }
+}
+</script>

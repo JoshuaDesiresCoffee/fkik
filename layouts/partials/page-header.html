@@ -1,0 +1,40 @@
+{{- /* Expects dict: breadcrumbs, title, subtitle, eyebrow, showEventMeta, page */ -}}
+<header class="page-header">
+  <div class="container">
+    {{ partial "breadcrumb.html" .breadcrumbs }}
+    {{ with .eyebrow }}
+    <span class="eyebrow eyebrow--on-color">{{ . }}</span>
+    {{ end }}
+    <h1 class="page-header__title">{{ .title }}</h1>
+    {{ with .subtitle }}
+    <p class="page-header__subtitle">{{ . }}</p>
+    {{ end }}
+    {{ if .showEventMeta }}
+    <ul class="event-header-meta" aria-label="Veranstaltungsdetails">
+      <li class="event-header-meta__item">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <time datetime="{{ .page.Params.eventDatetime }}">{{ .page.Params.eventDateDisplay }}</time>
+      </li>
+      <li class="event-header-meta__item">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>{{ .page.Params.location }}</span>
+      </li>
+      {{ with .page.Params.admission }}
+      <li class="event-header-meta__item">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+        </svg>
+        <span>{{ . }}</span>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</header>

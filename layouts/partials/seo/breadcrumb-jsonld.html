@@ -1,0 +1,17 @@
+{{- /* Expects a slice of dicts: { name, url } */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{ range $i, $item := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "name": {{ $item.name | jsonify }}{{ with $item.url }},
+      "item": {{ . | jsonify }}{{ end }}
+    }
+    {{ end }}
+  ]
+}
+</script>

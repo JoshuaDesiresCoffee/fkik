@@ -1,0 +1,19 @@
+vorstand:
+  - name: Elisabeth Müller
+    role: Präsidentin
+  - name: Thomas Frei
+    role: Vizepräsident
+  - name: Monika Huber
+    role: Kassiererin
+  - name: Stefan Keller
+    role: Sekretär
+  - name: Ruth Zimmermann
+    role: Beisitzerin
+  - name: Markus Stalder
+    role: Beisitzer
+
+revisoren:
+  - name: Christine Schmid
+    role: Revisorin
+  - name: Beat Wenger
+    role: Revisor

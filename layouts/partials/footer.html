@@ -1,0 +1,42 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__grid">
+
+      <div class="site-footer__brand">
+        <p class="site-footer__title">
+          Förderverein Kirchenmusik<br>in der Karthäuserkirche
+        </p>
+        <p class="site-footer__desc">
+          {{ $.Site.Params.footerDesc }}
+        </p>
+      </div>
+
+      <div>
+        <p class="site-footer__col-title">Navigation</p>
+        <nav aria-label="Fusszeilen-Navigation">
+          <ul class="site-footer__links">
+            {{ range $.Site.Data.navigation.footer }}
+            <li><a href="{{ .url }}" class="site-footer__link">{{ .name }}</a></li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <p class="site-footer__col-title">Ort</p>
+        <address class="site-footer__address">
+          Karthäuserkirche<br>
+          Basel, Schweiz
+        </address>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>© {{ now.Format "2006" }} {{ $.Site.Params.orgName }}</p>
+      <p class="site-footer__season">
+        Kirchenjahr: <span data-season-label aria-live="polite">Trinitatiszeit</span>
+      </p>
+    </div>
+  </div>
+</footer>

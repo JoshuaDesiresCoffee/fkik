@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": {{ printf "%s#website" $.Site.BaseURL | jsonify }},
+  "url": {{ $.Site.BaseURL | strings.TrimRight "/" | jsonify }},
+  "name": {{ $.Site.Params.orgName | jsonify }},
+  "inLanguage": {{ $.Site.Params.inLanguage | jsonify }},
+  "publisher": {
+    "@id": {{ printf "%s#organization" $.Site.BaseURL | jsonify }}
+  }
+}
+</script>

@@ -1,0 +1,22 @@
+main:
+  - name: Anlässe
+    url: /anlaesse/
+    key: anlaesse
+  - name: Über uns
+    url: /ueber-uns/
+    key: ueber-uns
+  - name: Kontakt
+    url: /kontakt/
+    key: kontakt
+
+footer:
+  - name: Anlässe
+    url: /anlaesse/
+  - name: Über uns
+    url: /ueber-uns/
+  - name: Kontakt
+    url: /kontakt/
+  - name: Impressum
+    url: /impressum/
+  - name: Statuten
+    url: /media/statuten_foerderverein_kirchenmusik.pdf
