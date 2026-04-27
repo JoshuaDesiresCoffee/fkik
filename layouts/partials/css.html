@@ -17,4 +17,7 @@
 {{- else if eq .Section "kontakt" }}
 {{- $css := resources.Get "css/kontakt.css" | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- else if eq .Section "impressum" }}
+{{- $css := resources.Get "css/impressum.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 {{- end }}

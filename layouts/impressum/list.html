@@ -1,0 +1,22 @@
+{{ define "page-header" }}
+{{- $crumbs := slice
+  (dict "name" "Startseite" "url" "/" "current" false)
+  (dict "name" .Title       "url" "" "current" true)
+-}}
+{{ partial "page-header.html" (dict
+  "breadcrumbs" $crumbs
+  "title"       .Title
+  "subtitle"    .Params.pageSubtitle
+  "page"        .
+) }}
+{{ end }}
+
+{{ define "main" }}
+  <section class="kontakt-section">
+    <div class="container">
+      <div class="prose" style="max-width:72ch;padding:var(--s12) 0;">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+{{ end }}

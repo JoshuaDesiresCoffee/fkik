@@ -74,6 +74,9 @@
 {{ partial "seo/contactpage-jsonld.html" . }}
 {{- $crumbs := slice (dict "name" "Startseite" "url" $.Site.BaseURL) (dict "name" .Title "url" .Permalink) }}
 {{ partial "seo/breadcrumb-jsonld.html" $crumbs }}
+{{- else if not .IsHome }}
+{{- $crumbs := slice (dict "name" "Startseite" "url" $.Site.BaseURL) (dict "name" .Title "url" .Permalink) }}
+{{ partial "seo/breadcrumb-jsonld.html" $crumbs }}
 {{- end }}
 
 <!-- Fonts -->
