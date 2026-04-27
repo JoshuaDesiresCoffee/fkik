@@ -1,5 +1,5 @@
 {{- /* Expects a slice of dicts: { name, url, current } */ -}}
-<nav class="breadcrumb" aria-label="Brotkrümelpfad">
+<nav class="breadcrumb" aria-label="{{ i18n "breadcrumb_aria" }}">
   <ol class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
     {{ range $i, $item := . }}
     <li class="breadcrumb__item"

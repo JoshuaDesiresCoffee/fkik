@@ -5,7 +5,7 @@
 </head>
 <body>
   {{ block "skip-link" . }}
-  <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+  <a href="#main-content" class="skip-link">{{ i18n "skip_link" }}</a>
   {{ end }}
   {{ block "hero" . }}{{ end }}
   {{ partial "nav.html" . }}

@@ -4,7 +4,7 @@
 
       <div class="site-footer__brand">
         <p class="site-footer__title">
-          Förderverein Kirchenmusik<br>in der Karthäuserkirche
+          {{ i18n "brand_name_line1" }}<br>{{ i18n "brand_name_line2" }}
         </p>
         <p class="site-footer__desc">
           {{ $.Site.Params.footerDesc }}
@@ -12,8 +12,8 @@
       </div>
 
       <div>
-        <p class="site-footer__col-title">Navigation</p>
-        <nav aria-label="Fusszeilen-Navigation">
+        <p class="site-footer__col-title">{{ i18n "footer_nav_col" }}</p>
+        <nav aria-label="{{ i18n "footer_nav_aria" }}">
           <ul class="site-footer__links">
             {{ range $.Site.Data.navigation.footer }}
             <li><a href="{{ .url }}" class="site-footer__link">{{ .name }}</a></li>
@@ -23,10 +23,10 @@
       </div>
 
       <div>
-        <p class="site-footer__col-title">Ort</p>
+        <p class="site-footer__col-title">{{ i18n "footer_location_col" }}</p>
         <address class="site-footer__address">
-          Karthäuserkirche<br>
-          Basel, Schweiz
+          {{ i18n "footer_address_line1" }}<br>
+          {{ i18n "footer_address_line2" }}
         </address>
       </div>
 
@@ -35,7 +35,7 @@
     <div class="site-footer__bottom">
       <p>© {{ now.Format "2006" }} {{ $.Site.Params.orgName }}</p>
       <p class="site-footer__season">
-        Kirchenjahr: <span data-season-label aria-live="polite">Trinitatiszeit</span>
+        {{ i18n "footer_church_year_label" }} <span data-season-label aria-live="polite">{{ i18n "season_default" }}</span>
       </p>
     </div>
   </div>

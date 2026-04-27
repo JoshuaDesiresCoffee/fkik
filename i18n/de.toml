@@ -1,0 +1,356 @@
+# ─── Global ───────────────────────────────────────────────────────────────────
+
+[skip_link]
+other = "Zum Inhalt springen"
+
+[breadcrumb_aria]
+other = "Brotkrümelpfad"
+
+[breadcrumb_home]
+other = "Startseite"
+
+[breadcrumb_anlaesse]
+other = "Anlässe"
+
+[event_meta_aria]
+other = "Veranstaltungsdetails"
+
+[more_info]
+other = "Mehr erfahren"
+
+[season_default]
+other = "Trinitatiszeit"
+
+# ─── Brand name (two-line display) ────────────────────────────────────────────
+
+[brand_name_line1]
+other = "Förderverein Kirchenmusik"
+
+[brand_name_line2]
+other = "in der Karthäuserkirche"
+
+# ─── Navigation ───────────────────────────────────────────────────────────────
+
+[nav_toggle_open]
+other = "Navigation öffnen"
+
+# ─── Footer ───────────────────────────────────────────────────────────────────
+
+[footer_nav_col]
+other = "Navigation"
+
+[footer_nav_aria]
+other = "Fusszeilen-Navigation"
+
+[footer_location_col]
+other = "Ort"
+
+[footer_address_line1]
+other = "Karthäuserkirche"
+
+[footer_address_line2]
+other = "Basel, Schweiz"
+
+[footer_church_year_label]
+other = "Kirchenjahr:"
+
+# ─── Homepage – hero / scroller ───────────────────────────────────────────────
+
+[next_event_eyebrow]
+other = "Nächster Anlass"
+
+[about_eyebrow]
+other = "Was wir tun"
+
+[gallery_eyebrow]
+other = "Eindrücke"
+
+[gallery_headline]
+other = "Musik erleben"
+
+[gallery_aria]
+other = "Bildergalerie aus Veranstaltungen"
+
+[gallery_img1_alt]
+other = "Chor und Orchester bei einem Abendkonzert in der Karthäuserkirche"
+
+[gallery_img2_alt]
+other = "Dirigentin leitet die Kantorei während der Probe"
+
+[gallery_img3_alt]
+other = "Streicher und Bläser der Karthäuserkirche im Zusammenspiel"
+
+[join_eyebrow]
+other = "Mitmachen"
+
+[join_cta_primary]
+other = "Jetzt Mitglied werden"
+
+[join_cta_secondary]
+other = "Über den Verein"
+
+# ─── Homepage – feature cards ─────────────────────────────────────────────────
+
+[feature_concerts_title]
+other = "Konzerte & Gottesdienste"
+
+[feature_concerts_text]
+other = "Von festlichen Kantatengottesdiensten bis zu grossen Orchesterkonzerten: Wir gestalten Musikerlebnisse, die bewegen und verbinden — in der Karthäuserkirche und darüber hinaus."
+
+[feature_choir_title]
+other = "Kantorei & Chor"
+
+[feature_choir_text]
+other = "Die Kantorei der Karthäuserkirche ist das Herzstück unserer Arbeit. Engagierte Sängerinnen und Sänger geben der Gemeinde eine Stimme — in Gottesdienst und Konzert."
+
+[feature_organ_title]
+other = "Orgelmusik"
+
+[feature_organ_text]
+other = "Die Orgel der Karthäuserkirche ist ein Instrument von besonderer Schönheit. Wir sorgen für ihre Pflege und ermöglichen Orgelkonzerte, die ihren Klang in den Vordergrund stellen."
+
+# ─── Events list ──────────────────────────────────────────────────────────────
+
+[events_eyebrow]
+other = "Vorschau"
+
+[events_upcoming_headline]
+other = "Kommende Anlässe"
+
+[events_count]
+one = "1 Veranstaltung"
+other = "{{ . }} Veranstaltungen"
+
+[events_upcoming_aria]
+other = "Kommende Veranstaltungen"
+
+[events_none]
+other = "Aktuell sind keine Anlässe geplant."
+
+[events_past_eyebrow]
+other = "Archiv"
+
+[events_past_headline]
+other = "Vergangene Anlässe"
+
+[events_archive_show]
+other = "Archiv anzeigen"
+
+[events_archive_close]
+other = "Archiv schliessen"
+
+[events_past_aria]
+other = "Vergangene Veranstaltungen"
+
+# ─── Event single ─────────────────────────────────────────────────────────────
+
+[event_about_eyebrow]
+other = "Über den Anlass"
+
+[event_performers_heading]
+other = "Mitwirkende"
+
+[event_back_link]
+other = "Alle Anlässe"
+
+[event_gallery_eyebrow]
+other = "Impressionen"
+
+[event_gallery_headline]
+other = "Bilder vom Anlass"
+
+[event_gallery_aria]
+other = "Fotogalerie"
+
+# ─── Über uns ─────────────────────────────────────────────────────────────────
+
+[ueber_uns_eyebrow]
+other = "Über den Verein"
+
+[pillars_eyebrow]
+other = "Wie wir wirken"
+
+[pillars_headline]
+other = "Drei Säulen unserer Arbeit"
+
+[pillar_community_title]
+other = "Gemeinschaft & Mitglieder"
+
+[pillar_community_text]
+other = "Unser Verein lebt von seinen Mitgliedern. Jährliche Versammlungen, gesellige Zusammenkünfte und die gemeinsame Leidenschaft für Musik verbinden Menschen verschiedenster Hintergründe."
+
+[pillar_arts_title]
+other = "Künstlerische Förderung"
+
+[pillar_arts_text]
+other = "Wir finanzieren Konzerte, Noten und Instrumente. Wir unterstützen die Kantorei bei Proben und Aufführungen und ermöglichen jungen Musikerinnen und Musikern den Zugang zur Kirchenmusik."
+
+[pillar_church_title]
+other = "Kirchliche Zusammenarbeit"
+
+[pillar_church_text]
+other = "Wir sind Partner der Kirchgemeinde, nicht Konkurrenz. Gemeinsam mit dem Kantorat und der Kirchenleitung gestalten wir ein Programm, das Gottesdienst und Konzert als Einheit versteht."
+
+[board_eyebrow]
+other = "Menschen hinter der Musik"
+
+[board_headline]
+other = "Unser Vorstand"
+
+[board_aria]
+other = "Vorstandsmitglieder"
+
+[board_info_pre]
+other = "Der Vorstand wird jährlich von der Generalversammlung gewählt. Die Generalversammlung ist das oberste Organ des Vereins und findet jeweils im Frühling statt. Unsere"
+
+[board_info_statuten]
+other = "Statuten"
+
+[board_info_post]
+other = "stehen zum Download bereit."
+
+[ueber_gallery_eyebrow]
+other = "Aus unserem Vereinsleben"
+
+[ueber_gallery_headline]
+other = "Eindrücke"
+
+[ueber_gallery_aria]
+other = "Bildergalerie aus dem Vereinsleben"
+
+[ueber_gallery_img1_alt]
+other = "Mitglieder des Fördervereins nach einem Jahreskonzert in der Karthäuserkirche"
+
+[ueber_gallery_img2_alt]
+other = "Die Kantorei der Karthäuserkirche während einer Probe"
+
+[ueber_gallery_img3_alt]
+other = "Organist an der Orgel der Karthäuserkirche Basel"
+
+[cta_headline]
+other = "Werden Sie Teil unserer Gemeinschaft"
+
+[cta_desc]
+other = "Als Mitglied unterstützen Sie Kirchenmusik in Basel direkt und wirkungsvoll. Der Beitrag ist bescheiden — die Wirkung gross."
+
+[cta_to_events]
+other = "Zu den Anlässen"
+
+# ─── Kontakt ──────────────────────────────────────────────────────────────────
+
+[contact_email_label]
+other = "E-Mail"
+
+[contact_email_heading]
+other = "Schreiben Sie uns"
+
+[contact_email_text1]
+other = "Für Fragen zu Konzerten, zur Mitgliedschaft oder zum Verein steht Ihnen unser Vorstand gerne zur Verfügung. Wir antworten in der Regel innerhalb weniger Werktage."
+
+[contact_noscript]
+other = "E-Mail:"
+
+[contact_noscript_hint]
+other = "(Bitte [at] durch @ ersetzen)"
+
+[contact_email_aria]
+other = "E-Mail senden"
+
+[contact_note_label]
+other = "Hinweis"
+
+[contact_note_text1]
+other = "Der Vorstand ist ehrenamtlich tätig. Wir bitten um etwas Geduld bei Anfragen — insbesondere rund um die grossen Konzerttermine."
+
+[contact_note_text2_pre]
+other = "Für dringende Anfragen zu Veranstaltungen empfehlen wir einen Blick auf unsere"
+
+[contact_note_anlaesse]
+other = "Anlässeseite"
+
+[contact_membership_heading]
+other = "Mitglied werden"
+
+[contact_membership_intro]
+other = "Mitglied zu werden ist einfach und unkompliziert. Ihr Beitrag fliesst direkt in Konzerte, Noten, Instrumente und die Förderung der Kantorei."
+
+[contact_steps_aria]
+other = "Schritte zur Mitgliedschaft"
+
+[contact_step1_title]
+other = "Talon herunterladen"
+
+[contact_step1_text]
+other = "Laden Sie unsere Beitrittserklärung als PDF herunter."
+
+[contact_step2_title]
+other = "Ausfüllen & unterschreiben"
+
+[contact_step2_text]
+other = "Tragen Sie Ihre Angaben ein und unterschreiben Sie den Talon."
+
+[contact_step3_title]
+other = "Einsenden oder E-Mail"
+
+[contact_step3_text]
+other = "Senden Sie den ausgefüllten Talon per Post oder scannen Sie ihn ein und schicken Sie ihn per E-Mail."
+
+[contact_download_btn]
+other = "Beitrittserklärung (PDF)"
+
+[contact_download_aria]
+other = "Beitrittserklärung als PDF herunterladen"
+
+[contact_fees_title]
+other = "Mitgliederbeitrag"
+
+[contact_fee_single]
+other = "Einzelmitglied:"
+
+[contact_fee_couple]
+other = "Paarmitglied:"
+
+[contact_fee_patron]
+other = "Gönnermitglied:"
+
+[contact_fee_youth_pre]
+other = "Studierende und Jugendliche:"
+
+[contact_donate_eyebrow]
+other = "Unterstützen Sie uns"
+
+[contact_donate_headline]
+other = "Spenden & Adresse"
+
+[contact_bank_label]
+other = "Bankverbindung"
+
+[contact_donate_heading]
+other = "Jede Spende zählt"
+
+[contact_donate_text]
+other = "Auch ohne Mitgliedschaft können Sie unsere Arbeit mit einer Spende unterstützen. Jeder Betrag hilft, Kirchenmusik in Basel lebendig zu halten."
+
+[contact_iban_label]
+other = "IBAN"
+
+[contact_beneficiary]
+other = "Begünstigter:"
+
+[contact_bank]
+other = "Bank:"
+
+[contact_reference]
+other = "Vermerk:"
+
+[contact_address_label]
+other = "Postadresse"
+
+[contact_address_heading]
+other = "Wo wir zu finden sind"
+
+[contact_address_text]
+other = "Unsere Veranstaltungen finden in der Karthäuserkirche statt. Den Vorstand erreichen Sie am zuverlässigsten per E-Mail."
+
+[contact_transit]
+other = "Die Karthäuserkirche ist mit dem ÖV gut erreichbar. Eine Wegbeschreibung erhalten Sie auf Anfrage per E-Mail."

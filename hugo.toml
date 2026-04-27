@@ -1,29 +1,21 @@
 baseURL = 'https://www.lutherkirchenmusik-basel.ch/'
-languageCode = 'de'
 defaultContentLanguage = 'de'
-title = 'Förderverein Kirchenmusik in der Karthäuserkirche'
 enableRobotsTXT = true
 buildFuture      = true
 
+# Language-neutral site params (shared across all languages)
 [params]
   orgName        = 'Förderverein Kirchenmusik in der Karthäuserkirche'
   orgShortName   = 'Förderverein Kirchenmusik Karthäuserkirche'
   orgAltName     = 'FKIK Basel'
-  description    = 'Der Förderverein Kirchenmusik unterstützt und fördert das Musikleben in der Karthäuserkirche Basel: Konzerte, Kantorei, Orgelmusik und Gemeinschaft seit Jahrzehnten.'
-  ogDescription  = 'Konzerte, Kantorei und Orgelmusik in der Karthäuserkirche Basel. Werden Sie Teil unserer Gemeinschaft.'
-  orgDescription = 'Der Förderverein unterstützt und fördert das kirchenmusikalische Leben in der Karthäuserkirche Basel durch Konzerte, Kantorei und Gemeinschaftspflege.'
   orgFounding    = '1982'
-  locale         = 'de_CH'
-  inLanguage     = 'de-CH'
+  venueName      = 'Karthäuserkirche Basel'
   venueCity      = 'Basel'
   venueRegion    = 'BS'
   venueCountry   = 'CH'
-  venueName      = 'Karthäuserkirche Basel'
   ogImage        = '/media/kantorei.png'
-  ogImageAlt     = 'Chor und Orchester in der Karthäuserkirche Basel'
   ogImageWidth   = '1200'
   ogImageHeight  = '630'
-  footerDesc     = 'Wir fördern und unterstützen die kirchenmusikalische Arbeit in der Karthäuserkirche Basel — durch Konzerte, Gemeinschaft und Engagement für eine lebendige Musikkultur.'
   emailUser      = 'info'
   emailDomain    = 'lutherkirchenmusik-basel.ch'
 
@@ -40,7 +32,17 @@ buildFuture      = true
 [languages]
   [languages.de]
     languageName = 'Deutsch'
-    weight = 1
+    weight       = 1
+    title        = 'Förderverein Kirchenmusik in der Karthäuserkirche'
+
+    [languages.de.params]
+      locale         = 'de_CH'
+      inLanguage     = 'de-CH'
+      description    = 'Der Förderverein Kirchenmusik unterstützt und fördert das Musikleben in der Karthäuserkirche Basel: Konzerte, Kantorei, Orgelmusik und Gemeinschaft seit Jahrzehnten.'
+      ogDescription  = 'Konzerte, Kantorei und Orgelmusik in der Karthäuserkirche Basel. Werden Sie Teil unserer Gemeinschaft.'
+      orgDescription = 'Der Förderverein unterstützt und fördert das kirchenmusikalische Leben in der Karthäuserkirche Basel durch Konzerte, Kantorei und Gemeinschaftspflege.'
+      ogImageAlt     = 'Chor und Orchester in der Karthäuserkirche Basel'
+      footerDesc     = 'Wir fördern und unterstützen die kirchenmusikalische Arbeit in der Karthäuserkirche Basel — durch Konzerte, Gemeinschaft und Engagement für eine lebendige Musikkultur.'
 
 [markup]
   [markup.goldmark]

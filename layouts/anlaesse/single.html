@@ -1,8 +1,8 @@
 {{ define "page-header" }}
 {{- $crumbs := slice
-  (dict "name" "Startseite" "url" "/" "current" false)
-  (dict "name" "Anlässe"   "url" "/anlaesse/" "current" false)
-  (dict "name" .Title      "url" "" "current" true)
+  (dict "name" (i18n "breadcrumb_home")     "url" "/" "current" false)
+  (dict "name" (i18n "breadcrumb_anlaesse") "url" "/anlaesse/" "current" false)
+  (dict "name" .Title                        "url" "" "current" true)
 -}}
 {{ partial "page-header.html" (dict
   "breadcrumbs"   $crumbs
@@ -19,7 +19,7 @@
     <div class="container">
       <div class="event-content">
 
-        <span class="eyebrow">Über den Anlass</span>
+        <span class="eyebrow">{{ i18n "event_about_eyebrow" }}</span>
         {{ if .Content }}
         <div class="event-lead">{{ .Content }}</div>
         {{ else }}
@@ -28,7 +28,7 @@
 
         {{ with .Params.performers }}
         <section class="event-section" aria-labelledby="performers-heading">
-          <h2 class="event-section__heading" id="performers-heading">Mitwirkende</h2>
+          <h2 class="event-section__heading" id="performers-heading">{{ i18n "event_performers_heading" }}</h2>
           <dl class="performers-list">
             {{ range . }}
             <div class="performers-item">
@@ -46,7 +46,7 @@
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
-            Alle Anlässe
+            {{ i18n "event_back_link" }}
           </a>
         </div>
 
@@ -58,13 +58,13 @@
   <section class="event-gallery" aria-labelledby="gallery-heading">
     <div class="container">
       <header class="event-gallery__header">
-        <span class="eyebrow">Impressionen</span>
+        <span class="eyebrow">{{ i18n "event_gallery_eyebrow" }}</span>
         <h2 class="section-headline" id="gallery-heading"
             style="font-size:clamp(var(--text-lg),3.5vw,var(--text-xl))">
-          Bilder vom Anlass
+          {{ i18n "event_gallery_headline" }}
         </h2>
       </header>
-      <div class="event-gallery__grid" role="list" aria-label="Fotogalerie">
+      <div class="event-gallery__grid" role="list" aria-label="{{ i18n "event_gallery_aria" }}">
         {{ range . }}
         <figure class="event-gallery__item" role="listitem">
           <img src="{{ .src | relURL }}" alt="{{ .alt }}" width="800" height="600" loading="lazy">
