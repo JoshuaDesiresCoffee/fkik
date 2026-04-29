@@ -1,4 +1,4 @@
-baseURL = 'https://www.lutherkirchenmusik-basel.ch/'
+baseURL = 'https://www.fkik.ch/'
 defaultContentLanguage = 'de'
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
