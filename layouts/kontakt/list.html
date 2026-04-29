@@ -24,7 +24,7 @@
           <span class="contact-block__label">{{ i18n "contact_email_label" }}</span>
           <h2 id="email-heading" class="contact-block__title">{{ i18n "contact_email_heading" }}</h2>
           <div class="contact-block__body">
-            <p>{{ i18n "contact_email_text1" }}</p>
+            <p>{{ .Params.emailText }}</p>
             <p>
               <noscript>
                 <span class="email-fallback">
@@ -45,9 +45,9 @@
         <aside class="info-card" aria-label="{{ i18n "contact_note_label" }}">
           <p class="info-card__title">{{ i18n "contact_note_label" }}</p>
           <div class="info-card__body">
-            <p>{{ i18n "contact_note_text1" }}</p>
+            <p>{{ .Params.noteText1 }}</p>
             <p>
-              {{ i18n "contact_note_text2_pre" }}
+              {{ .Params.noteText2Pre }}
               <a href="{{ "/anlaesse/" | relURL }}" style="color:var(--lit);font-weight:600;">{{ i18n "contact_note_anlaesse" }}</a>.
             </p>
           </div>
@@ -66,27 +66,18 @@
       <div class="kontakt-cols">
         <div>
           <p style="font-size:var(--text-md);color:var(--ink-muted);line-height:1.7;margin-bottom:var(--s6);max-width:54ch;">
-            {{ i18n "contact_membership_intro" }}
+            {{ .Params.membershipIntro }}
           </p>
+          {{- $steps := index $.Site.Data $.Site.Language.Lang "membership_steps" }}
           <ol class="steps-list" aria-label="{{ i18n "contact_steps_aria" }}">
+            {{- range $steps }}
             <li class="steps-list__item">
               <span class="steps-list__num" aria-hidden="true"></span>
               <p class="steps-list__text">
-                <strong>{{ i18n "contact_step1_title" }}</strong> — {{ i18n "contact_step1_text" }}
+                <strong>{{ .title }}</strong> — {{ .text }}
               </p>
             </li>
-            <li class="steps-list__item">
-              <span class="steps-list__num" aria-hidden="true"></span>
-              <p class="steps-list__text">
-                <strong>{{ i18n "contact_step2_title" }}</strong> — {{ i18n "contact_step2_text" }}
-              </p>
-            </li>
-            <li class="steps-list__item">
-              <span class="steps-list__num" aria-hidden="true"></span>
-              <p class="steps-list__text">
-                <strong>{{ i18n "contact_step3_title" }}</strong> — {{ i18n "contact_step3_text" }}
-              </p>
-            </li>
+            {{- end }}
           </ol>
         </div>
 
@@ -137,7 +128,7 @@
           <span class="contact-block__label">{{ i18n "contact_bank_label" }}</span>
           <h3 class="contact-block__title" style="font-size:var(--text-md);">{{ i18n "contact_donate_heading" }}</h3>
           <div class="contact-block__body">
-            <p>{{ i18n "contact_donate_text" }}</p>
+            <p>{{ .Params.donateText }}</p>
           </div>
           <div class="iban-box">
             <p class="iban-label">{{ i18n "contact_iban_label" }}</p>
@@ -163,7 +154,7 @@
           <span class="contact-block__label">{{ i18n "contact_address_label" }}</span>
           <h3 class="contact-block__title" style="font-size:var(--text-md);">{{ i18n "contact_address_heading" }}</h3>
           <div class="contact-block__body">
-            <p>{{ i18n "contact_address_text" }}</p>
+            <p>{{ .Params.addressText }}</p>
           </div>
           <div class="iban-box" style="border-left-color:var(--border);">
             <address style="font-style:normal;font-size:var(--text-base);color:var(--ink);line-height:1.8;">
@@ -173,7 +164,7 @@
             </address>
           </div>
           <p style="margin-top:var(--s4);font-size:var(--text-sm);color:var(--ink-muted);line-height:1.65;">
-            {{ i18n "contact_transit" }}
+            {{ .Params.transit }}
           </p>
         </div>
 

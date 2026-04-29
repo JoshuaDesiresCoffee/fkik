@@ -87,35 +87,34 @@
         </div>
       </div>
 
+      {{- $features := index $.Site.Data $.Site.Language.Lang "features" }}
       <div class="features" role="list">
+        {{- range $features }}
         <article class="feature-card" role="listitem">
+          {{- if eq .icon "concerts" }}
           <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M9 18V5l12-2v13"></path>
             <circle cx="6" cy="18" r="3"></circle>
             <circle cx="18" cy="16" r="3"></circle>
           </svg>
-          <h3 class="feature-card__title">{{ i18n "feature_concerts_title" }}</h3>
-          <p class="feature-card__text">{{ i18n "feature_concerts_text" }}</p>
-        </article>
-        <article class="feature-card" role="listitem">
+          {{- else if eq .icon "choir" }}
           <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-          <h3 class="feature-card__title">{{ i18n "feature_choir_title" }}</h3>
-          <p class="feature-card__text">{{ i18n "feature_choir_text" }}</p>
-        </article>
-        <article class="feature-card" role="listitem">
+          {{- else if eq .icon "organ" }}
           <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
             <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
             <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
           </svg>
-          <h3 class="feature-card__title">{{ i18n "feature_organ_title" }}</h3>
-          <p class="feature-card__text">{{ i18n "feature_organ_text" }}</p>
+          {{- end }}
+          <h3 class="feature-card__title">{{ .title }}</h3>
+          <p class="feature-card__text">{{ .text }}</p>
         </article>
+        {{- end }}
       </div>
     </div>
   </section>
@@ -126,21 +125,22 @@
         <span class="eyebrow">{{ i18n "gallery_eyebrow" }}</span>
         <h2 id="gallery-heading" class="section-headline">{{ i18n "gallery_headline" }}</h2>
       </header>
+      {{- $gallery := .Params.gallery }}
       <div class="gallery-grid" role="list" aria-label="{{ i18n "gallery_aria" }}">
         <div class="gallery-item" role="listitem">
           <img src="{{ "media/kantorei.png" | relURL }}"
-               alt="{{ i18n "gallery_img1_alt" }}"
+               alt="{{ (index $gallery 0).alt }}"
                width="840" height="480" loading="lazy">
         </div>
         <div class="gallery-item" role="listitem">
           <img src="{{ "media/kantorei.png" | relURL }}"
-               alt="{{ i18n "gallery_img2_alt" }}"
+               alt="{{ (index $gallery 1).alt }}"
                width="600" height="240" loading="lazy"
                style="object-position: center 10%;">
         </div>
         <div class="gallery-item" role="listitem">
           <img src="{{ "media/kantorei.png" | relURL }}"
-               alt="{{ i18n "gallery_img3_alt" }}"
+               alt="{{ (index $gallery 2).alt }}"
                width="600" height="240" loading="lazy"
                style="object-position: right 60%;">
         </div>

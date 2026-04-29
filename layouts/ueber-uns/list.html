@@ -38,34 +38,33 @@
     <div class="container">
       <span class="eyebrow">{{ i18n "pillars_eyebrow" }}</span>
       <h2 id="pillars-heading" class="section-headline">{{ i18n "pillars_headline" }}</h2>
+      {{- $pillars := index $.Site.Data $.Site.Language.Lang "pillars" }}
       <div class="features" role="list">
+        {{- range $pillars }}
         <article class="feature-card" role="listitem">
+          {{- if eq .icon "community" }}
           <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
             <circle cx="9" cy="7" r="4"></circle>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-          <h3 class="feature-card__title">{{ i18n "pillar_community_title" }}</h3>
-          <p class="feature-card__text">{{ i18n "pillar_community_text" }}</p>
-        </article>
-        <article class="feature-card" role="listitem">
+          {{- else if eq .icon "arts" }}
           <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M9 18V5l12-2v13"></path>
             <circle cx="6" cy="18" r="3"></circle>
             <circle cx="18" cy="16" r="3"></circle>
           </svg>
-          <h3 class="feature-card__title">{{ i18n "pillar_arts_title" }}</h3>
-          <p class="feature-card__text">{{ i18n "pillar_arts_text" }}</p>
-        </article>
-        <article class="feature-card" role="listitem">
+          {{- else if eq .icon "church" }}
           <svg class="feature-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
           </svg>
-          <h3 class="feature-card__title">{{ i18n "pillar_church_title" }}</h3>
-          <p class="feature-card__text">{{ i18n "pillar_church_text" }}</p>
+          {{- end }}
+          <h3 class="feature-card__title">{{ .title }}</h3>
+          <p class="feature-card__text">{{ .text }}</p>
         </article>
+        {{- end }}
       </div>
     </div>
   </section>
@@ -75,13 +74,14 @@
       <span class="eyebrow">{{ i18n "board_eyebrow" }}</span>
       <h2 id="board-heading" class="section-headline">{{ i18n "board_headline" }}</h2>
       <div class="board-grid" role="list" aria-label="{{ i18n "board_aria" }}">
-        {{ range $.Site.Data.board.vorstand }}
+        {{- $board := index $.Site.Data $.Site.Language.Lang "board" }}
+        {{ range $board.vorstand }}
         <article class="person-card" role="listitem">
           <p class="person-card__role">{{ .role }}</p>
           <p class="person-card__name">{{ .name }}</p>
         </article>
         {{ end }}
-        {{ range $.Site.Data.board.revisoren }}
+        {{ range $board.revisoren }}
         <article class="person-card person-card--secondary" role="listitem">
           <p class="person-card__role">{{ .role }}</p>
           <p class="person-card__name">{{ .name }}</p>
@@ -89,10 +89,10 @@
         {{ end }}
       </div>
       <p style="margin-top:var(--s8);font-size:var(--text-sm);color:var(--ink-muted);max-width:68ch;line-height:1.7;">
-        {{ i18n "board_info_pre" }}
+        {{ .Params.boardInfoPre }}
         <a href="{{ "media/statuten_foerderverein_kirchenmusik.pdf" | relURL }}"
            style="color:var(--lit);font-weight:600;text-decoration:underline;text-underline-offset:0.15em;">{{ i18n "board_info_statuten" }}</a>
-        {{ i18n "board_info_post" }}
+        {{ .Params.boardInfoPost }}
       </p>
     </div>
   </section>
@@ -103,21 +103,22 @@
         <span class="eyebrow">{{ i18n "ueber_gallery_eyebrow" }}</span>
         <h2 id="gallery-heading" class="section-headline">{{ i18n "ueber_gallery_headline" }}</h2>
       </header>
+      {{- $gallery := .Params.gallery }}
       <div class="gallery-grid" role="list" aria-label="{{ i18n "ueber_gallery_aria" }}">
         <div class="gallery-item" role="listitem">
           <img src="{{ "media/kantorei.png" | relURL }}"
-               alt="{{ i18n "ueber_gallery_img1_alt" }}"
+               alt="{{ (index $gallery 0).alt }}"
                width="840" height="480" loading="lazy">
         </div>
         <div class="gallery-item" role="listitem">
           <img src="{{ "media/kantorei.png" | relURL }}"
-               alt="{{ i18n "ueber_gallery_img2_alt" }}"
+               alt="{{ (index $gallery 1).alt }}"
                width="600" height="240" loading="lazy"
                style="object-position: center 25%;">
         </div>
         <div class="gallery-item" role="listitem">
           <img src="{{ "media/kantorei.png" | relURL }}"
-               alt="{{ i18n "ueber_gallery_img3_alt" }}"
+               alt="{{ (index $gallery 2).alt }}"
                width="600" height="240" loading="lazy"
                style="object-position: left 40%;">
         </div>
@@ -129,8 +130,8 @@
     <div class="container">
       <div class="cta-strip__inner">
         <div class="cta-strip__text">
-          <h2 id="cta-heading" class="cta-strip__headline">{{ i18n "cta_headline" }}</h2>
-          <p class="cta-strip__desc">{{ i18n "cta_desc" }}</p>
+          <h2 id="cta-heading" class="cta-strip__headline">{{ .Params.ctaHeadline }}</h2>
+          <p class="cta-strip__desc">{{ .Params.ctaDesc }}</p>
         </div>
         <div class="cta-strip__actions">
           <a href="{{ "/kontakt/" | relURL }}" class="btn btn--primary">{{ i18n "join_cta_primary" }}</a>

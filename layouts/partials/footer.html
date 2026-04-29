@@ -15,7 +15,8 @@
         <p class="site-footer__col-title">{{ i18n "footer_nav_col" }}</p>
         <nav aria-label="{{ i18n "footer_nav_aria" }}">
           <ul class="site-footer__links">
-            {{ range $.Site.Data.navigation.footer }}
+            {{- $nav := index $.Site.Data $.Site.Language.Lang "navigation" }}
+            {{ range $nav.footer }}
             <li><a href="{{ .url }}" class="site-footer__link">{{ .name }}</a></li>
             {{ end }}
           </ul>

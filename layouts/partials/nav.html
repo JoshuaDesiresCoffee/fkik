@@ -8,7 +8,8 @@
       {{ i18n "brand_name_line1" }}
     </a>
     <ul class="site-nav__list" role="list">
-      {{ range $.Site.Data.navigation.main }}
+      {{- $nav := index $.Site.Data $.Site.Language.Lang "navigation" }}
+      {{ range $nav.main }}
       <li class="site-nav__item">
         <a class="site-nav__link" href="{{ .url }}"{{ if eq $section .key }} aria-current="page"{{ end }}>
           {{ .name }}

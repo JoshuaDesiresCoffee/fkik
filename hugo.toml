@@ -1,5 +1,6 @@
 baseURL = 'https://www.lutherkirchenmusik-basel.ch/'
 defaultContentLanguage = 'de'
+defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 buildFuture      = true
 

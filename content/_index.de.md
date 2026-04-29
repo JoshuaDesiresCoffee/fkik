@@ -25,4 +25,9 @@ joinText1: "Als Mitglied des Fördervereins ermöglichen Sie, dass Kirchenmusik 
 joinText2: "Mitglied werden ist unkompliziert: Laden Sie unseren Talon herunter, füllen Sie ihn aus und senden Sie ihn an uns — oder melden Sie sich direkt per E-Mail. Wir freuen uns auf Sie."
 joinQuote: "«Die Kirchenmusik verbindet Menschen, öffnet Herzen und gibt dem Glauben eine Stimme — auch in der Stille nach dem letzten Akkord.»"
 joinQuoteAttribution: "— Vorstand des Fördervereins"
+
+gallery:
+  - alt: "Chor und Orchester bei einem Abendkonzert in der Karthäuserkirche"
+  - alt: "Dirigentin leitet die Kantorei während der Probe"
+  - alt: "Streicher und Bläser der Karthäuserkirche im Zusammenspiel"
 ---
