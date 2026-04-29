@@ -1,4 +1,4 @@
-baseURL = 'https://www.fkik.ch/'
+baseURL = 'https://fkik.ch/'
 defaultContentLanguage = 'de'
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
