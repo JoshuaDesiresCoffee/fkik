@@ -11,7 +11,7 @@ content:
     label: Anlässe
     type: collection
     path: content/anlaesse
-    extension: "de.md"
+    extension: md
     view:
       fields: [title, eventDateDisplay, eventType, draft]
       primary: title
@@ -168,6 +168,9 @@ content:
         type: object
         list: true
         fields:
+          - name: src
+            label: Bild
+            type: image
           - name: alt
             label: Alt-Text
             type: string
@@ -227,6 +230,9 @@ content:
         type: object
         list: true
         fields:
+          - name: src
+            label: Bild
+            type: image
           - name: alt
             label: Alt-Text
             type: string

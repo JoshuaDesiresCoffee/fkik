@@ -128,18 +128,18 @@
       {{- $gallery := .Params.gallery }}
       <div class="gallery-grid" role="list" aria-label="{{ i18n "gallery_aria" }}">
         <div class="gallery-item" role="listitem">
-          <img src="{{ "media/kantorei.png" | relURL }}"
+          <img src="{{ ((index $gallery 0).src | default "media/kantorei.png") | relURL }}"
                alt="{{ (index $gallery 0).alt }}"
                width="840" height="480" loading="lazy">
         </div>
         <div class="gallery-item" role="listitem">
-          <img src="{{ "media/kantorei.png" | relURL }}"
+          <img src="{{ ((index $gallery 1).src | default "media/kantorei.png") | relURL }}"
                alt="{{ (index $gallery 1).alt }}"
                width="600" height="240" loading="lazy"
                style="object-position: center 10%;">
         </div>
         <div class="gallery-item" role="listitem">
-          <img src="{{ "media/kantorei.png" | relURL }}"
+          <img src="{{ ((index $gallery 2).src | default "media/kantorei.png") | relURL }}"
                alt="{{ (index $gallery 2).alt }}"
                width="600" height="240" loading="lazy"
                style="object-position: right 60%;">
