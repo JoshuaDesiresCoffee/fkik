@@ -1,0 +1,316 @@
+media:
+  input: static/media
+  output: /media
+
+content:
+
+  # ──────────────────────────────────────────────
+  # ANLÄSSE – Events collection (one file per event)
+  # ──────────────────────────────────────────────
+  - name: anlaesse
+    label: Anlässe
+    type: collection
+    path: content/anlaesse
+    extension: "de.md"
+    view:
+      fields: [title, eventDateDisplay, eventType, draft]
+      primary: title
+    fields:
+      - name: title
+        label: Titel
+        type: string
+        required: true
+      - name: date
+        label: Hugo-Datum
+        type: date
+        options:
+          time: true
+          format: "YYYY-MM-DDTHH:mm:ssZ"
+      - name: draft
+        label: Entwurf
+        type: boolean
+      - name: eventDate
+        label: Veranstaltungsdatum
+        type: date
+        options:
+          format: "YYYY-MM-DD"
+      - name: eventTime
+        label: Uhrzeit (z.B. 18:30)
+        type: string
+      - name: eventDatetime
+        label: Datum + Zeit (ISO, z.B. 2026-05-28T18:30)
+        type: string
+      - name: eventDateDisplay
+        label: Anzeigedatum (z.B. Donnerstag, 28. Mai 2026 · 18:30 Uhr)
+        type: string
+      - name: eventDay
+        label: Tag (zweistellig)
+        type: string
+      - name: eventMonth
+        label: Monat (ausgeschrieben)
+        type: string
+      - name: eventYear
+        label: Jahr
+        type: string
+      - name: eventType
+        label: Veranstaltungsart
+        type: select
+        options:
+          values:
+            - Konzert
+            - Mitgliederversammlung
+            - Gottesdienst
+            - Orgelkonzert
+            - Chorkonzert
+            - Sonstige
+      - name: location
+        label: Ort (kurz)
+        type: string
+      - name: locationName
+        label: Ortsname (vollständig)
+        type: string
+      - name: postalCode
+        label: Postleitzahl
+        type: string
+      - name: liturgicalColor
+        label: Liturgische Farbe
+        type: select
+        options:
+          values: [white, red, green, purple, black, rose]
+      - name: admission
+        label: Eintritt
+        type: string
+      - name: isFree
+        label: Eintritt frei
+        type: boolean
+      - name: description
+        label: Beschreibung (SEO & Schema)
+        type: text
+      - name: ogTitle
+        label: OG Titel
+        type: string
+      - name: ogDescription
+        label: OG Beschreibung
+        type: text
+      - name: subtitle
+        label: Untertitel
+        type: string
+      - name: performers
+        label: Mitwirkende
+        type: string
+        list: true
+      - name: images
+        label: Bilder
+        type: image
+        list: true
+      - name: body
+        label: Beschreibungstext
+        type: rich-text
+
+  # ──────────────────────────────────────────────
+  # STARTSEITE
+  # ──────────────────────────────────────────────
+  - name: startseite
+    label: Startseite
+    type: file
+    path: content/_index.de.md
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: description
+        label: Meta-Beschreibung
+        type: text
+      - name: keywords
+        label: Keywords
+        type: string
+      - name: ogTitle
+        label: OG Titel
+        type: string
+      - name: ogDescription
+        label: OG Beschreibung
+        type: text
+      - name: heroYear
+        label: Hero – Jahr
+        type: string
+      - name: heroTagline
+        label: Hero – Tagline
+        type: string
+      - name: aboutHeadline
+        label: Über-uns – Überschrift
+        type: string
+      - name: aboutStatNumber
+        label: Über-uns – Statistik (Zahl)
+        type: string
+      - name: aboutStatLabel
+        label: Über-uns – Statistik (Label)
+        type: string
+      - name: aboutText
+        label: Über-uns – Text
+        type: text
+      - name: joinHeadline
+        label: Mitmachen – Überschrift
+        type: string
+      - name: joinText1
+        label: Mitmachen – Text 1
+        type: text
+      - name: joinText2
+        label: Mitmachen – Text 2
+        type: text
+      - name: joinQuote
+        label: Zitat
+        type: text
+      - name: joinQuoteAttribution
+        label: Zitatquelle
+        type: string
+      - name: gallery
+        label: Galerie
+        type: object
+        list: true
+        fields:
+          - name: alt
+            label: Alt-Text
+            type: string
+
+  # ──────────────────────────────────────────────
+  # ÜBER UNS
+  # ──────────────────────────────────────────────
+  - name: ueber-uns
+    label: Über uns
+    type: file
+    path: content/ueber-uns/_index.de.md
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: description
+        label: Meta-Beschreibung
+        type: text
+      - name: keywords
+        label: Keywords
+        type: string
+      - name: ogTitle
+        label: OG Titel
+        type: string
+      - name: ogDescription
+        label: OG Beschreibung
+        type: text
+      - name: pageSubtitle
+        label: Seiten-Untertitel
+        type: string
+      - name: foundingYear
+        label: Gründungsjahr
+        type: string
+      - name: memberCount
+        label: Mitgliederzahl
+        type: string
+      - name: vereinHeadline
+        label: Verein – Überschrift
+        type: string
+      - name: vereinStatNumber
+        label: Verein – Statistik (Zahl)
+        type: string
+      - name: vereinStatLabel
+        label: Verein – Statistik (Label)
+        type: string
+      - name: vereinText1
+        label: Verein – Text 1
+        type: text
+      - name: vereinText2
+        label: Verein – Text 2
+        type: text
+      - name: vereinText3
+        label: Verein – Text 3
+        type: text
+      - name: gallery
+        label: Galerie
+        type: object
+        list: true
+        fields:
+          - name: alt
+            label: Alt-Text
+            type: string
+      - name: boardInfoPre
+        label: Vorstandsinfo (Einleitung)
+        type: text
+      - name: boardInfoPost
+        label: Vorstandsinfo (Abschluss)
+        type: string
+      - name: ctaHeadline
+        label: CTA – Überschrift
+        type: string
+      - name: ctaDesc
+        label: CTA – Beschreibung
+        type: text
+
+  # ──────────────────────────────────────────────
+  # KONTAKT
+  # ──────────────────────────────────────────────
+  - name: kontakt
+    label: Kontakt
+    type: file
+    path: content/kontakt/_index.de.md
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: description
+        label: Meta-Beschreibung
+        type: text
+      - name: keywords
+        label: Keywords
+        type: string
+      - name: ogTitle
+        label: OG Titel
+        type: string
+      - name: ogDescription
+        label: OG Beschreibung
+        type: text
+      - name: pageSubtitle
+        label: Seiten-Untertitel
+        type: string
+      - name: emailText
+        label: E-Mail Text
+        type: text
+      - name: noteText1
+        label: Hinweistext 1
+        type: text
+      - name: noteText2Pre
+        label: Hinweistext 2 (Einleitung)
+        type: string
+      - name: membershipIntro
+        label: Mitgliedschaft – Intro
+        type: text
+      - name: donateText
+        label: Spenden – Text
+        type: text
+      - name: addressText
+        label: Adresse – Text
+        type: text
+      - name: transit
+        label: Anreise – Text
+        type: text
+
+  # ──────────────────────────────────────────────
+  # IMPRESSUM
+  # ──────────────────────────────────────────────
+  - name: impressum
+    label: Impressum
+    type: file
+    path: content/impressum/_index.de.md
+    fields:
+      - name: title
+        label: Titel
+        type: string
+      - name: description
+        label: Meta-Beschreibung
+        type: text
+      - name: ogTitle
+        label: OG Titel
+        type: string
+      - name: pageSubtitle
+        label: Seiten-Untertitel
+        type: string
+      - name: body
+        label: Inhalt
+        type: rich-text
