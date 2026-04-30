@@ -1,19 +1,15 @@
 vorstand:
-  - name: Elisabeth Müller
-    role: Präsidentin
-  - name: Thomas Frei
-    role: Vizepräsident
-  - name: Monika Huber
-    role: Kassiererin
-  - name: Stefan Keller
-    role: Sekretär
-  - name: Ruth Zimmermann
-    role: Beisitzerin
-  - name: Markus Stalder
-    role: Beisitzer
-
-revisoren:
-  - name: Christine Schmid
-    role: Revisorin
-  - name: Beat Wenger
-    role: Revisor
+  - name: Daniel Reicke
+    role: Vorstandsmitglied
+  - name: Stefan Beltinger
+    role: Künstlerische Leitung
+  - name: Janina Gl.
+    role: Vorstandsmitglied
+  - name: Christine Eising
+    role: Vorstandsmitglied
+  - name: Rebecca Reese
+    role: Vorstandsmitglied
+  - name: Jens Galdiks
+    role: Vorstandsmitglied
+  - name: Sebastian Hoersch
+    role: Vorstandsmitglied

@@ -6,44 +6,43 @@ buildFuture      = true
 
 # Language-neutral site params (shared across all languages)
 [params]
-  orgName        = 'Förderverein Kirchenmusik in der Karthäuserkirche'
-  orgShortName   = 'Förderverein Kirchenmusik Karthäuserkirche'
-  orgAltName     = 'FKIK Basel'
-  orgFounding    = '1982'
-  venueName      = 'Karthäuserkirche Basel'
+  orgName        = 'Förderverein Kirchenmusik in der Kartäuserkirche'
+  orgShortName   = 'Förderverein Kirchenmusik Kartäuserkirche'
+  orgAltName     = 'FKiK'
+  orgFounding    = '2024'
+  venueName      = 'Kartäuserkirche Basel'
   venueCity      = 'Basel'
   venueRegion    = 'BS'
   venueCountry   = 'CH'
   ogImage        = '/media/kantorei.png'
   ogImageWidth   = '1200'
   ogImageHeight  = '630'
-  emailUser      = 'info'
-  emailDomain    = 'lutherkirchenmusik-basel.ch'
+  emailUser      = 'foerderverein-kirchenmusik'
+  emailDomain    = 'luther-basel.ch'
 
 [params.membership]
-  einzelmitglied  = 'CHF 40.– / Jahr'
-  paarmitglied    = 'CHF 60.– / Jahr'
-  goennermitglied = 'ab CHF 100.– / Jahr'
-  jugend          = 'CHF 20.– / Jahr (unter 25)'
-  iban            = 'CH00 0000 0000 0000 0000 0'
-  beguenstigter   = 'Förderverein Kirchenmusik in der Karthäuserkirche'
-  bank            = ''
-  vermerk         = 'Spende Kirchenmusik'
+  mitgliedsbeitrag = 'mindestens CHF 30.– / Kalenderjahr'
+  iban             = 'CH57 0900 1657 1780 0'
+  bic              = 'POFICHBEXXX'
+  beguenstigter    = 'Förderverein Kirchenmusik in der Kartäuserkirche, 4056 Basel'
+  bank             = 'PostFinance'
+  vermerk_spende   = 'Spende Förderverein Kirchenmusik'
+  vermerk_beitrag  = 'Mitgliedsbeitrag Förderverein Kirchenmusik'
 
 [languages]
   [languages.de]
     languageName = 'Deutsch'
     weight       = 1
-    title        = 'Förderverein Kirchenmusik in der Karthäuserkirche'
+    title        = 'Förderverein Kirchenmusik in der Kartäuserkirche'
 
     [languages.de.params]
       locale         = 'de_CH'
       inLanguage     = 'de-CH'
-      description    = 'Der Förderverein Kirchenmusik unterstützt und fördert das Musikleben in der Karthäuserkirche Basel: Konzerte, Kantorei, Orgelmusik und Gemeinschaft seit Jahrzehnten.'
-      ogDescription  = 'Konzerte, Kantorei und Orgelmusik in der Karthäuserkirche Basel. Werden Sie Teil unserer Gemeinschaft.'
-      orgDescription = 'Der Förderverein unterstützt und fördert das kirchenmusikalische Leben in der Karthäuserkirche Basel durch Konzerte, Kantorei und Gemeinschaftspflege.'
-      ogImageAlt     = 'Chor und Orchester in der Karthäuserkirche Basel'
-      footerDesc     = 'Wir fördern und unterstützen die kirchenmusikalische Arbeit in der Karthäuserkirche Basel — durch Konzerte, Gemeinschaft und Engagement für eine lebendige Musikkultur.'
+      description    = 'Der Förderverein Kirchenmusik in der Kartäuserkirche unterstützt Kirchenmusik-Anlässe der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz – Kantatengottesdienste, Konzerte und Orgelmusik in der Kartäuserkirche.'
+      ogDescription  = 'Kirchenmusik-Anlässe in der Kartäuserkirche Basel: Kantatengottesdienste, Konzerte und Orgelmusik. Werden Sie Mitglied oder unterstützen Sie uns mit einer Spende.'
+      orgDescription = 'Der Förderverein Kirchenmusik in der Kartäuserkirche bezweckt die finanzielle und organisatorische Unterstützung von Kirchenmusik-Anlässen der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche.'
+      ogImageAlt     = 'Innenraum der Kartäuserkirche Basel mit Arp Schnitger-Orgel'
+      footerDesc     = 'Wir unterstützen Kirchenmusik-Anlässe der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche – Kantatengottesdienste, Konzerte und Orgelmusik.'
 
 [markup]
   [markup.goldmark]

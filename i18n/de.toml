@@ -27,7 +27,7 @@ other = "Trinitatiszeit"
 other = "Förderverein Kirchenmusik"
 
 [brand_name_line2]
-other = "in der Karthäuserkirche"
+other = "in der Kartäuserkirche"
 
 # ─── Navigation ───────────────────────────────────────────────────────────────
 
@@ -46,7 +46,7 @@ other = "Fusszeilen-Navigation"
 other = "Ort"
 
 [footer_address_line1]
-other = "Karthäuserkirche"
+other = "Kartäuserkirche"
 
 [footer_address_line2]
 other = "Basel, Schweiz"

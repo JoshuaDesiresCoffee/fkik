@@ -1,42 +1,32 @@
 ---
-title: Über uns
-description: "Erfahren Sie mehr über den Förderverein Kirchenmusik in der
-  Karthäuserkirche Basel: unsere Geschichte, Ziele, den Vorstand und wie wir die
-  Kirchenmusik seit über 40 Jahren unterstützen."
-keywords: Förderverein Kirchenmusik Basel, Karthäuserkirche Verein, Vorstand,
-  Geschichte, Kirchenmusik fördern Basel, Kantorei, Orgel
-ogTitle: Über uns | Förderverein Kirchenmusik Karthäuserkirche Basel
-ogDescription: Geschichte, Struktur und Vorstand des Fördervereins Kirchenmusik
-  in der Karthäuserkirche Basel. Seit über 40 Jahren für lebendige Kirchenmusik.
-pageSubtitle: Seit über 40 Jahren setzen wir uns für ein reiches musikalisches
-  Leben in der Karthäuserkirche Basel ein.
-foundingYear: "1990"
-memberCount: "80"
-vereinHeadline: Gegründet aus Liebe zur Musik
-vereinStatNumber: "1982"
-vereinStatLabel: Gründungsjahr des Fördervereins
-vereinText1: Der Förderverein Kirchenmusik in der Karthäuserkirche wurde 1982
-  von engagierten Gemeindemitgliedern gegründet, die das musikalische Leben
-  ihrer Kirche nachhaltig unterstützen wollten. Was als kleine Initiative
-  begann, ist heute ein lebendiger Verein mit über 80 Mitgliedern.
-vereinText2: "Unser Zweck ist einfach: Wir ermöglichen Kirchenmusik. Durch
-  Mitgliederbeiträge und Spenden finanzieren wir Konzerte, unterstützen die
-  Kantorei, pflegen die Orgel und schaffen Begegnungen. Wir arbeiten eng mit dem
-  Kantorat und der Kirchgemeinde zusammen — im Dienst der Gemeinde und der Stadt
-  Basel."
-vereinText3: Musik öffnet Menschen. Sie schafft Stille mitten im Lärm,
-  Gemeinschaft mitten in der Vereinzelung, und Hoffnung mitten in der Schwere.
-  Dafür stehen wir ein.
+title: "Über uns"
+description: "Förderverein Kirchenmusik in der Kartäuserkirche Basel: 2024 gegründeter, gemeinnütziger Verein zur Unterstützung von Kantatengottesdiensten, Konzerten und Orgelmusik in der Kartäuserkirche."
+keywords: "Förderverein Kirchenmusik Basel, Kartäuserkirche Verein, Vorstand, Kantatengottesdienst, Arp Schnitger Orgel"
+ogTitle: "Über uns | Förderverein Kirchenmusik Kartäuserkirche Basel"
+ogDescription: "2024 gegründeter, gemeinnütziger Verein zur Förderung von Kirchenmusik in der Kartäuserkirche Basel."
+pageSubtitle: "Wir unterstützen Kirchenmusik-Anlässe der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche."
+schemaType: "AboutPage"
+
+foundingYear: "2024"
+
+vereinHeadline: "Ein historischer Raum für überlieferte Kirchenmusik"
+vereinStatNumber: "2024"
+vereinStatLabel: "Gründungsjahr des Fördervereins"
+
+vereinText1: "Der Förderverein Kirchenmusik in der Kartäuserkirche (FKiK) wurde am 4. September 2024 gegründet. Als Verein gemäss Art. 60ff des Schweizerischen Zivilgesetzbuches mit Sitz in Basel ist er gemeinnützig sowie politisch und konfessionell unabhängig."
+
+vereinText2: "Unser Zweck: den überaus reichen Schatz an überlieferter Kirchenmusik wieder in kirchlichem Rahmen erklingen zu lassen. Wir unterstützen finanziell und organisatorisch Kirchenmusik-Anlässe – insbesondere Kantatengottesdienste – der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche. Mitgliederbeiträge und Spenden fliessen direkt in diese Anlässe."
+
+vereinText3: "Die Kartäuserkirche – von 1408 bis 1416 als Klosterkirche erbaut und seit 1962 von der Evangelisch-Lutherischen Kirche genutzt – beherbergt eine 1994 von Bernhardt H. Edskes (Wohlen) gebaute Kopie der Arp Schnitger-Orgel von 1694. Architektur, Akustik und Instrument bilden einen einzigartigen Rahmen für barocke und insbesondere norddeutsche Kirchenmusik."
+
 gallery:
-  - alt: Mitglieder des Fördervereins nach einem Jahreskonzert in der
-      Karthäuserkirche
-  - alt: Die Kantorei der Karthäuserkirche während einer Probe
-  - alt: Organist an der Orgel der Karthäuserkirche Basel
-boardInfoPre: Der Vorstand wird jährlich von der Generalversammlung gewählt. Die
-  Generalversammlung ist das oberste Organ des Vereins und findet jeweils im
-  Frühling statt. Unsere
-boardInfoPost: stehen zum Download bereit.
-ctaHeadline: Werden Sie Teil unserer Gemeinschaft
-ctaDesc: Als Mitglied unterstützen Sie Kirchenmusik in Basel direkt und
-  wirkungsvoll. Der Beitrag ist bescheiden — die Wirkung gross.
+  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
+  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
+  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
+
+boardInfoPre: "Der Vorstand wird jährlich von der Generalversammlung gewählt. Die Generalversammlung findet alljährlich statt und sollte spätestens 6 Monate nach Abschluss des Geschäftsjahres durchgeführt werden. Unsere"
+boardInfoPost: "stehen zum Download bereit."
+
+ctaHeadline: "Werden Sie Mitglied"
+ctaDesc: "Mit einem Mitgliedsbeitrag von mindestens CHF 30 pro Kalenderjahr unterstützen Sie Kirchenmusik-Anlässe in der Kartäuserkirche – und erhalten Einladungen zu Vereinssitzungen und zur Generalversammlung."
 ---

@@ -204,9 +204,6 @@ content:
       - name: foundingYear
         label: Gründungsjahr
         type: string
-      - name: memberCount
-        label: Mitgliederzahl
-        type: string
       - name: vereinHeadline
         label: Verein – Überschrift
         type: string

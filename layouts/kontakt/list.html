@@ -97,14 +97,7 @@
           <div class="info-card info-card--on-warm" aria-label="{{ i18n "contact_fees_title" }}">
             <p class="info-card__title">{{ i18n "contact_fees_title" }}</p>
             <div class="info-card__body">
-              <p>
-                <strong>{{ i18n "contact_fee_single" }}</strong> {{ $.Site.Params.membership.einzelmitglied }}<br>
-                <strong>{{ i18n "contact_fee_couple" }}</strong> {{ $.Site.Params.membership.paarmitglied }}<br>
-                <strong>{{ i18n "contact_fee_patron" }}</strong> {{ $.Site.Params.membership.goennermitglied }}
-              </p>
-              <p style="margin-top:var(--s2);">
-                {{ i18n "contact_fee_youth_pre" }} {{ $.Site.Params.membership.jugend }}.
-              </p>
+              <p>{{ $.Site.Params.membership.mitgliedsbeitrag }}</p>
             </div>
           </div>
         </div>
@@ -141,7 +134,7 @@
               <dd>{{ . }}</dd>
               {{ end }}
               <dt>{{ i18n "contact_reference" }}</dt>
-              <dd>{{ $.Site.Params.membership.vermerk }}</dd>
+              <dd>«{{ $.Site.Params.membership.vermerk_spende }}» (Spende) bzw. «{{ $.Site.Params.membership.vermerk_beitrag }}» (Mitgliedsbeitrag)</dd>
             </dl>
           </div>
         </div>

@@ -1,2 +1,2 @@
 # fkik
-Webseite für den Förderverein Kirchenmusik in der Karthäuserkirche.
+Webseite für den Förderverein Kirchenmusik in der Kartäuserkirche.

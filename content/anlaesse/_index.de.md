@@ -1,8 +1,8 @@
 ---
 title: "Anlässe"
-description: "Kommende und vergangene Konzerte, Gottesdienste und Veranstaltungen des Fördervereins Kirchenmusik in der Karthäuserkirche Basel. Alle Termine auf einen Blick."
-keywords: "Kirchenmusik Basel, Konzerte Basel, Anlässe Karthäuserkirche, Gottesdienst Orgelkonzert, Chor Basel, Kirchenkonzert"
-ogTitle: "Anlässe & Konzerte | Förderverein Kirchenmusik Karthäuserkirche Basel"
-ogDescription: "Kommende Konzerte, Gottesdienste und Veranstaltungen in der Karthäuserkirche Basel. Jetzt Termine vormerken."
-pageSubtitle: "Konzerte, Gottesdienste und Begegnungen rund um die Kirchenmusik in der Karthäuserkirche Basel."
+description: "Kommende und vergangene Kirchenmusik-Anlässe des Fördervereins in der Kartäuserkirche Basel: Kantatengottesdienste, Konzerte, Orgelmusik und Vereinsversammlungen."
+keywords: "Kirchenmusik Basel, Kantatengottesdienst, Konzerte Kartäuserkirche, Orgelkonzert, Anlässe Förderverein"
+ogTitle: "Anlässe | Förderverein Kirchenmusik Kartäuserkirche Basel"
+ogDescription: "Kommende und vergangene Kirchenmusik-Anlässe in der Kartäuserkirche Basel."
+pageSubtitle: "Kantatengottesdienste, Konzerte und Orgelmusik in der Kartäuserkirche Basel."
 ---

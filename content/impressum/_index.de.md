@@ -1,21 +1,25 @@
 ---
 title: "Impressum"
-description: "Impressum und rechtliche Angaben zum Betreiber dieser Website gemäss schweizerischem Recht."
-ogTitle: "Impressum | Förderverein Kirchenmusik Karthäuserkirche Basel"
+description: "Impressum und rechtliche Angaben zum Förderverein Kirchenmusik in der Kartäuserkirche, Basel."
+ogTitle: "Impressum | Förderverein Kirchenmusik Kartäuserkirche Basel"
 pageSubtitle: "Angaben gemäss Art. 3 lit. s UWG"
 ---
 
 ## Betreiber dieser Website
 
-**Förderverein Kirchenmusik in der Karthäuserkirche**  
-Rechtsform: Verein gemäss Art. 60 ff. ZGB  
-Karthäuserkirche  
-4058 Basel  
-Schweiz
+**Förderverein Kirchenmusik in der Kartäuserkirche**
+Rechtsform: Verein gemäss Art. 60ff des Schweizerischen Zivilgesetzbuches (ZGB)
+Sitz: Basel
+Gegründet: 4. September 2024
 
-**E-Mail:** <a href="#" class="js-email" data-u="info" data-d="lutherkirchenmusik-basel.ch" aria-label="E-Mail senden">info [at] lutherkirchenmusik-basel.ch</a>
+Vereinspost:
+c/o Evangelisch-Lutherische Kirche Basel und Nordwestschweiz
+Friedensgasse 57
+CH-4056 Basel
 
-**Verantwortlich für den Inhalt:** Vorstand des Fördervereins Kirchenmusik in der Karthäuserkirche
+**E-Mail:** <a href="#" class="js-email" data-u="foerderverein-kirchenmusik" data-d="luther-basel.ch" aria-label="E-Mail senden">foerderverein-kirchenmusik [at] luther-basel.ch</a>
+
+**Verantwortlich für den Inhalt:** Vorstand des Fördervereins Kirchenmusik in der Kartäuserkirche
 
 ---
 

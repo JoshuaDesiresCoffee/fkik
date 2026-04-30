@@ -1,4 +1,4 @@
-/* Förderverein Kirchenmusik in der Karthäuserkirche — main.js */
+/* Förderverein Kirchenmusik in der Kartäuserkirche — main.js */
 
 // ─── Easter date (Gregorian anonymous algorithm) ────────────────────────────
 function calcEaster(year) {

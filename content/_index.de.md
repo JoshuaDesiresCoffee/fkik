@@ -1,33 +1,33 @@
 ---
-title: "Förderverein Kirchenmusik in der Karthäuserkirche Basel"
-description: "Der Förderverein Kirchenmusik unterstützt und fördert das Musikleben in der Karthäuserkirche Basel: Konzerte, Kantorei, Orgelmusik und Gemeinschaft seit Jahrzehnten."
-keywords: "Kirchenmusik Basel, Karthäuserkirche, Förderverein, Kantorei, Konzerte, Orgel, Chor Basel, lutherische Kirchenmusik"
-ogTitle: "Förderverein Kirchenmusik in der Karthäuserkirche Basel"
-ogDescription: "Konzerte, Kantorei und Orgelmusik in der Karthäuserkirche Basel. Werden Sie Teil unserer Gemeinschaft."
+title: "Förderverein Kirchenmusik in der Kartäuserkirche Basel"
+description: "Der Förderverein Kirchenmusik unterstützt Kirchenmusik-Anlässe der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche – Kantatengottesdienste, Konzerte und Orgelmusik."
+keywords: "Kirchenmusik Basel, Kartäuserkirche, Förderverein, Kantatengottesdienst, Arp Schnitger Orgel, Lutherische Kirche Basel"
+ogTitle: "Förderverein Kirchenmusik in der Kartäuserkirche Basel"
+ogDescription: "Kirchenmusik-Anlässe in der Kartäuserkirche Basel. Werden Sie Mitglied oder unterstützen Sie uns mit einer Spende."
 
 heroYear: "2026"
-heroTagline: "Kirchenmusik in Basel fördern, erleben und bewahren."
+heroTagline: "Kirchenmusik in der Kartäuserkirche Basel fördern und ermöglichen."
 
-aboutHeadline: "Musik, die das Herz bewegt"
-aboutStatNumber: "40+"
-aboutStatLabel: "Jahre lebendige Kirchenmusik in Basel"
+aboutHeadline: "Kirchenmusik in einem historischen Raum"
+aboutStatNumber: "1416"
+aboutStatLabel: "Weihejahr der Kartäuserkirche Basel"
 aboutText: |
-  Der Förderverein Kirchenmusik in der Karthäuserkirche setzt sich seit
-  Jahrzehnten dafür ein, dass musikalisches Leben in unserer Kirche
-  gedeiht — als Geschenk an die Gemeinde und die ganze Stadt Basel.
+  Die Kartäuserkirche Basel – als ehemalige Klosterkirche aus dem 15. Jahrhundert –
+  ist mit ihrer Akustik, Architektur und der barocken Arp Schnitger-Orgel ein
+  einzigartiger Ort für überlieferte Kirchenmusik.
 
-  Wir ermöglichen Konzerte, unterstützen die Kantorei, pflegen die
-  Orgelmusik und schaffen Begegnungen. Denn Musik öffnet Türen — zu
-  Menschen, zu Stille, zu Gott.
+  Unser Verein bezweckt die finanzielle und organisatorische Unterstützung von
+  Kirchenmusik-Anlässen – insbesondere Kantatengottesdiensten – der
+  Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche.
 
-joinHeadline: "Teil von etwas Besonderem werden"
-joinText1: "Als Mitglied des Fördervereins ermöglichen Sie, dass Kirchenmusik in Basel lebt und wächst. Ihr Beitrag fliesst direkt in Konzerte, Noten, Instrumente und die Ausbildung junger Musikerinnen und Musiker."
-joinText2: "Mitglied werden ist unkompliziert: Laden Sie unseren Talon herunter, füllen Sie ihn aus und senden Sie ihn an uns — oder melden Sie sich direkt per E-Mail. Wir freuen uns auf Sie."
-joinQuote: "«Die Kirchenmusik verbindet Menschen, öffnet Herzen und gibt dem Glauben eine Stimme — auch in der Stille nach dem letzten Akkord.»"
-joinQuoteAttribution: "— Vorstand des Fördervereins"
+joinHeadline: "Mehr Kirchenmusik in der Kartäuserkirche – mit Ihrer Hilfe"
+joinText1: "Helfen Sie mit, mehr Kirchenmusik in die Kartäuserkirche zu bringen. Mit Ihrem Mitgliedsbeitrag oder Ihrer Spende ermöglichen Sie Kantatengottesdienste, Konzerte und Orgelmusik im historischen Raum."
+joinText2: "Mitglied wird, wer den jährlichen Beitrag von mindestens CHF 30 einzahlt. Mitglieder erhalten Einladungen zu Vereinssitzungen und zur Generalversammlung – und können Vorschläge und Ideen einbringen."
+joinQuote: "Den überaus reichen Schatz an überlieferter Kirchenmusik wieder in kirchlichem Rahmen erklingen lassen."
+joinQuoteAttribution: "— Zweck des Vereins, Statuten"
 
 gallery:
-  - alt: "Chor und Orchester bei einem Abendkonzert in der Karthäuserkirche"
-  - alt: "Dirigentin leitet die Kantorei während der Probe"
-  - alt: "Streicher und Bläser der Karthäuserkirche im Zusammenspiel"
+  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
+  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
+  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
 ---
