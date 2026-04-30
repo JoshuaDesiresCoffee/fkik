@@ -5,7 +5,7 @@ media:
 content:
 
   # ──────────────────────────────────────────────
-  # ANLÄSSE – Events collection (one file per event)
+  # ANLÄSSE – Konzerte, Gottesdienste, Versammlungen
   # ──────────────────────────────────────────────
   - name: anlaesse
     label: Anlässe
@@ -13,99 +13,73 @@ content:
     path: content/anlaesse
     extension: md
     view:
-      fields: [title, eventDateDisplay, eventType, draft]
+      fields: [title, date, eventType, draft]
       primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
       - name: title
         label: Titel
         type: string
         required: true
       - name: date
-        label: Hugo-Datum
+        label: Datum & Uhrzeit
         type: date
+        required: true
         options:
           time: true
           format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+        description: "Wann findet der Anlass statt?"
       - name: draft
-        label: Entwurf
+        label: Entwurf (noch nicht veröffentlicht)
         type: boolean
-      - name: eventDate
-        label: Veranstaltungsdatum
-        type: date
-        options:
-          format: "yyyy-MM-dd"
-      - name: eventTime
-        label: Uhrzeit (z.B. 18:30)
-        type: string
-      - name: eventDatetime
-        label: Datum + Zeit (ISO, z.B. 2026-05-28T18:30)
-        type: string
-      - name: eventDateDisplay
-        label: Anzeigedatum (z.B. Donnerstag, 28. Mai 2026 · 18:30 Uhr)
-        type: string
-      - name: eventDay
-        label: Tag (zweistellig)
-        type: string
-      - name: eventMonth
-        label: Monat (ausgeschrieben)
-        type: string
-      - name: eventYear
-        label: Jahr
-        type: string
+        default: false
       - name: eventType
-        label: Veranstaltungsart
+        label: Art des Anlasses
         type: select
         options:
           values:
             - Konzert
+            - Kantatengottesdienst
             - Mitgliederversammlung
             - Gottesdienst
             - Orgelkonzert
             - Chorkonzert
             - Sonstige
-      - name: location
-        label: Ort (kurz)
-        type: string
-      - name: locationName
-        label: Ortsname (vollständig)
-        type: string
-      - name: postalCode
-        label: Postleitzahl
-        type: string
-      - name: liturgicalColor
-        label: Liturgische Farbe
-        type: select
-        options:
-          values: [white, red, green, purple, black, rose]
       - name: admission
-        label: Eintritt
+        label: Eintritt (Text)
         type: string
+        default: "Eintritt frei · Kollekte erbeten"
       - name: isFree
         label: Eintritt frei
         type: boolean
+        default: true
       - name: description
-        label: Beschreibung (SEO & Schema)
+        label: Kurzbeschreibung
         type: text
-      - name: ogTitle
-        label: OG Titel
-        type: string
-      - name: ogDescription
-        label: OG Beschreibung
-        type: text
-      - name: subtitle
-        label: Untertitel
-        type: string
+        description: "Wird in Übersicht und Detailansicht angezeigt."
       - name: performers
         label: Mitwirkende
         type: string
         list: true
+        description: "Eine Person/Gruppe pro Zeile, z.B. «Ulla Westvik (Sopran)»"
       - name: images
-        label: Bilder
-        type: image
+        label: Bilder vom Anlass
+        type: object
         list: true
+        fields:
+          - name: src
+            label: Bild
+            type: image
+          - name: alt
+            label: Alt-Text
+            type: string
       - name: body
-        label: Beschreibungstext
+        label: Detailtext
         type: rich-text
+        description: "Optional: längerer Beschreibungstext für die Detailseite."
 
   # ──────────────────────────────────────────────
   # STARTSEITE
@@ -119,49 +93,40 @@ content:
         label: Titel
         type: string
       - name: description
-        label: Meta-Beschreibung
-        type: text
-      - name: keywords
-        label: Keywords
-        type: string
-      - name: ogTitle
-        label: OG Titel
-        type: string
-      - name: ogDescription
-        label: OG Beschreibung
+        label: Kurzbeschreibung (für Suchmaschinen)
         type: text
       - name: heroYear
         label: Hero – Jahr
         type: string
       - name: heroTagline
-        label: Hero – Tagline
+        label: Hero – Slogan
         type: string
       - name: aboutHeadline
-        label: Über-uns – Überschrift
+        label: «Über uns»-Überschrift
         type: string
       - name: aboutStatNumber
-        label: Über-uns – Statistik (Zahl)
+        label: Statistik – Zahl
         type: string
       - name: aboutStatLabel
-        label: Über-uns – Statistik (Label)
+        label: Statistik – Beschriftung
         type: string
       - name: aboutText
-        label: Über-uns – Text
+        label: «Über uns»-Text
         type: text
       - name: joinHeadline
-        label: Mitmachen – Überschrift
+        label: «Mitmachen»-Überschrift
         type: string
       - name: joinText1
-        label: Mitmachen – Text 1
+        label: «Mitmachen»-Text 1
         type: text
       - name: joinText2
-        label: Mitmachen – Text 2
+        label: «Mitmachen»-Text 2
         type: text
       - name: joinQuote
         label: Zitat
         type: text
       - name: joinQuoteAttribution
-        label: Zitatquelle
+        label: Quelle des Zitats
         type: string
       - name: gallery
         label: Galerie
@@ -187,40 +152,28 @@ content:
         label: Titel
         type: string
       - name: description
-        label: Meta-Beschreibung
-        type: text
-      - name: keywords
-        label: Keywords
-        type: string
-      - name: ogTitle
-        label: OG Titel
-        type: string
-      - name: ogDescription
-        label: OG Beschreibung
+        label: Kurzbeschreibung (für Suchmaschinen)
         type: text
       - name: pageSubtitle
-        label: Seiten-Untertitel
-        type: string
-      - name: foundingYear
-        label: Gründungsjahr
+        label: Untertitel
         type: string
       - name: vereinHeadline
         label: Verein – Überschrift
         type: string
       - name: vereinStatNumber
-        label: Verein – Statistik (Zahl)
+        label: Statistik – Zahl
         type: string
       - name: vereinStatLabel
-        label: Verein – Statistik (Label)
+        label: Statistik – Beschriftung
         type: string
       - name: vereinText1
-        label: Verein – Text 1
+        label: Text 1
         type: text
       - name: vereinText2
-        label: Verein – Text 2
+        label: Text 2
         type: text
       - name: vereinText3
-        label: Verein – Text 3
+        label: Text 3
         type: text
       - name: gallery
         label: Galerie
@@ -234,16 +187,16 @@ content:
             label: Alt-Text
             type: string
       - name: boardInfoPre
-        label: Vorstandsinfo (Einleitung)
+        label: Vorstandsinfo (vor Statuten-Link)
         type: text
       - name: boardInfoPost
-        label: Vorstandsinfo (Abschluss)
+        label: Vorstandsinfo (nach Statuten-Link)
         type: string
       - name: ctaHeadline
-        label: CTA – Überschrift
+        label: Aufruf – Überschrift
         type: string
       - name: ctaDesc
-        label: CTA – Beschreibung
+        label: Aufruf – Beschreibung
         type: text
 
   # ──────────────────────────────────────────────
@@ -258,37 +211,28 @@ content:
         label: Titel
         type: string
       - name: description
-        label: Meta-Beschreibung
-        type: text
-      - name: keywords
-        label: Keywords
-        type: string
-      - name: ogTitle
-        label: OG Titel
-        type: string
-      - name: ogDescription
-        label: OG Beschreibung
+        label: Kurzbeschreibung (für Suchmaschinen)
         type: text
       - name: pageSubtitle
-        label: Seiten-Untertitel
+        label: Untertitel
         type: string
       - name: emailText
-        label: E-Mail Text
+        label: E-Mail – Einleitungstext
         type: text
       - name: noteText1
-        label: Hinweistext 1
+        label: Hinweistext
         type: text
       - name: noteText2Pre
-        label: Hinweistext 2 (Einleitung)
+        label: Hinweistext (vor Anlässe-Link)
         type: string
       - name: membershipIntro
-        label: Mitgliedschaft – Intro
+        label: Mitgliedschaft – Einleitungstext
         type: text
       - name: donateText
         label: Spenden – Text
         type: text
       - name: addressText
-        label: Adresse – Text
+        label: Adresse – Begleittext
         type: text
       - name: transit
         label: Anreise – Text
@@ -306,14 +250,98 @@ content:
         label: Titel
         type: string
       - name: description
-        label: Meta-Beschreibung
+        label: Kurzbeschreibung (für Suchmaschinen)
         type: text
-      - name: ogTitle
-        label: OG Titel
-        type: string
       - name: pageSubtitle
-        label: Seiten-Untertitel
+        label: Untertitel
         type: string
       - name: body
         label: Inhalt
         type: rich-text
+
+  # ──────────────────────────────────────────────
+  # VEREINSEINSTELLUNGEN – E-Mail, IBAN, PDFs
+  # ──────────────────────────────────────────────
+  - name: einstellungen
+    label: Vereinseinstellungen
+    type: file
+    path: data/site.yaml
+    format: yaml
+    fields:
+      - name: contact
+        label: Kontakt
+        type: object
+        fields:
+          - name: email_user
+            label: E-Mail (vor @)
+            type: string
+            description: "Beispiel: «info» für info@example.ch"
+          - name: email_domain
+            label: E-Mail (nach @)
+            type: string
+            description: "Beispiel: «example.ch»"
+          - name: postal_address
+            label: Vereinspost-Adresse
+            type: text
+            description: "Mehrzeilig erlaubt (Empfänger, Strasse, PLZ Ort)."
+
+      - name: membership
+        label: Mitgliedschaft & Bankverbindung
+        type: object
+        fields:
+          - name: fee_text
+            label: Mitgliedsbeitrag (Text)
+            type: string
+          - name: iban
+            label: IBAN
+            type: string
+          - name: bic
+            label: BIC
+            type: string
+          - name: bank
+            label: Bank
+            type: string
+          - name: beneficiary
+            label: Begünstigter
+            type: string
+          - name: reference_donation
+            label: Verwendungszweck Spende
+            type: string
+          - name: reference_membership
+            label: Verwendungszweck Mitgliedsbeitrag
+            type: string
+
+      - name: documents
+        label: Dokumente (PDFs)
+        type: object
+        fields:
+          - name: statuten
+            label: Statuten (PDF)
+            type: file
+            description: "Wird im Vorstandsinfo-Bereich verlinkt."
+          - name: beitrittstalon
+            label: Beitrittserklärung (PDF)
+            type: file
+            description: "Wird auf der Kontaktseite verlinkt."
+
+  # ──────────────────────────────────────────────
+  # VORSTAND
+  # ──────────────────────────────────────────────
+  - name: vorstand
+    label: Vorstand
+    type: file
+    path: data/de/board.yaml
+    format: yaml
+    fields:
+      - name: vorstand
+        label: Vorstandsmitglieder
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: role
+            label: Funktion
+            type: string
+            description: "z.B. «Präsident», «Kassier», «Künstlerische Leitung»"

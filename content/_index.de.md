@@ -1,9 +1,6 @@
 ---
 title: "Förderverein Kirchenmusik in der Kartäuserkirche Basel"
 description: "Der Förderverein Kirchenmusik unterstützt Kirchenmusik-Anlässe der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche – Kantatengottesdienste, Konzerte und Orgelmusik."
-keywords: "Kirchenmusik Basel, Kartäuserkirche, Förderverein, Kantatengottesdienst, Arp Schnitger Orgel, Lutherische Kirche Basel"
-ogTitle: "Förderverein Kirchenmusik in der Kartäuserkirche Basel"
-ogDescription: "Kirchenmusik-Anlässe in der Kartäuserkirche Basel. Werden Sie Mitglied oder unterstützen Sie uns mit einer Spende."
 
 heroYear: "2026"
 heroTagline: "Kirchenmusik in der Kartäuserkirche Basel fördern und ermöglichen."

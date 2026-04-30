@@ -12,6 +12,7 @@
 {{ end }}
 
 {{ define "main" }}
+  {{- $s := $.Site.Data.site }}
   <section class="kontakt-section" aria-labelledby="email-heading">
     <div class="container">
       <div class="kontakt-cols">
@@ -28,16 +29,16 @@
             <p>
               <noscript>
                 <span class="email-fallback">
-                  {{ i18n "contact_noscript" }} {{ $.Site.Params.emailUser }} [at] {{ $.Site.Params.emailDomain }}<br>
+                  {{ i18n "contact_noscript" }} {{ $s.contact.email_user }} [at] {{ $s.contact.email_domain }}<br>
                   {{ i18n "contact_noscript_hint" }}
                 </span>
               </noscript>
               <a href="#"
                  class="js-email"
-                 data-u="{{ $.Site.Params.emailUser }}"
-                 data-d="{{ $.Site.Params.emailDomain }}"
+                 data-u="{{ $s.contact.email_user }}"
+                 data-d="{{ $s.contact.email_domain }}"
                  aria-label="{{ i18n "contact_email_aria" }}"
-              >{{ $.Site.Params.emailUser }} [at] {{ $.Site.Params.emailDomain }}</a>
+              >{{ $s.contact.email_user }} [at] {{ $s.contact.email_domain }}</a>
             </p>
           </div>
         </div>
@@ -82,7 +83,7 @@
         </div>
 
         <div style="display:flex;flex-direction:column;gap:var(--s5);">
-          <a href="{{ "media/beitrittstalon.pdf" | relURL }}"
+          <a href="{{ $s.documents.beitrittstalon | relURL }}"
              class="download-btn"
              download
              aria-label="{{ i18n "contact_download_aria" }}">
@@ -97,7 +98,7 @@
           <div class="info-card info-card--on-warm" aria-label="{{ i18n "contact_fees_title" }}">
             <p class="info-card__title">{{ i18n "contact_fees_title" }}</p>
             <div class="info-card__body">
-              <p>{{ $.Site.Params.membership.mitgliedsbeitrag }}</p>
+              <p>{{ $s.membership.fee_text }}</p>
             </div>
           </div>
         </div>
@@ -125,16 +126,16 @@
           </div>
           <div class="iban-box">
             <p class="iban-label">{{ i18n "contact_iban_label" }}</p>
-            <p class="iban-number">{{ $.Site.Params.membership.iban }}</p>
+            <p class="iban-number">{{ $s.membership.iban }}</p>
             <dl class="iban-meta">
               <dt>{{ i18n "contact_beneficiary" }}</dt>
-              <dd>{{ $.Site.Params.membership.beguenstigter }}</dd>
-              {{ with $.Site.Params.membership.bank }}
+              <dd>{{ $s.membership.beneficiary }}</dd>
+              {{ with $s.membership.bank }}
               <dt>{{ i18n "contact_bank" }}</dt>
               <dd>{{ . }}</dd>
               {{ end }}
               <dt>{{ i18n "contact_reference" }}</dt>
-              <dd>«{{ $.Site.Params.membership.vermerk_spende }}» (Spende) bzw. «{{ $.Site.Params.membership.vermerk_beitrag }}» (Mitgliedsbeitrag)</dd>
+              <dd>«{{ $s.membership.reference_donation }}» (Spende) bzw. «{{ $s.membership.reference_membership }}» (Mitgliedsbeitrag)</dd>
             </dl>
           </div>
         </div>
@@ -150,11 +151,7 @@
             <p>{{ .Params.addressText }}</p>
           </div>
           <div class="iban-box" style="border-left-color:var(--border);">
-            <address style="font-style:normal;font-size:var(--text-base);color:var(--ink);line-height:1.8;">
-              {{ $.Site.Params.orgName }}<br>
-              {{ $.Site.Params.venueName }}<br>
-              {{ $.Site.Params.venueCity }}
-            </address>
+            <address style="font-style:normal;font-size:var(--text-base);color:var(--ink);line-height:1.8;white-space:pre-line;">{{ $s.contact.postal_address }}</address>
           </div>
           <p style="margin-top:var(--s4);font-size:var(--text-sm);color:var(--ink-muted);line-height:1.65;">
             {{ .Params.transit }}

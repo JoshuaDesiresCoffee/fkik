@@ -28,7 +28,7 @@
 <meta property="og:url"         content="{{ .Permalink }}">
 <meta property="og:site_name"   content="{{ $.Site.Params.orgShortName }}">
 <meta property="og:title"       content="{{ .Params.ogTitle | default .Title }}">
-<meta property="og:description" content="{{ .Params.ogDescription | default $.Site.Params.ogDescription }}">
+<meta property="og:description" content="{{ .Params.ogDescription | default .Params.description | default $.Site.Params.ogDescription }}">
 {{- $ogImage := .Params.ogImage | default $.Site.Params.ogImage }}
 <meta property="og:image"       content="{{ $ogImage | absURL }}">
 <meta property="og:image:alt"   content="{{ $.Site.Params.ogImageAlt }}">
@@ -38,7 +38,7 @@
 <!-- Twitter / X Card -->
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="{{ .Params.ogTitle | default .Title }}">
-<meta name="twitter:description" content="{{ .Params.ogDescription | default $.Site.Params.ogDescription }}">
+<meta name="twitter:description" content="{{ .Params.ogDescription | default .Params.description | default $.Site.Params.ogDescription }}">
 <meta name="twitter:image"       content="{{ $ogImage | absURL }}">
 
 <!-- Resource hints -->

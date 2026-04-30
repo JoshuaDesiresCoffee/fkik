@@ -90,7 +90,7 @@
       </div>
       <p style="margin-top:var(--s8);font-size:var(--text-sm);color:var(--ink-muted);max-width:68ch;line-height:1.7;">
         {{ .Params.boardInfoPre }}
-        <a href="{{ "media/statuten_foerderverein_kirchenmusik.pdf" | relURL }}"
+        <a href="{{ $.Site.Data.site.documents.statuten | relURL }}"
            style="color:var(--lit);font-weight:600;text-decoration:underline;text-underline-offset:0.15em;">{{ i18n "board_info_statuten" }}</a>
         {{ .Params.boardInfoPost }}
       </p>

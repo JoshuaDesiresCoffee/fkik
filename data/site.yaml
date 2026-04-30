@@ -1,0 +1,22 @@
+# Vereinseinstellungen — über Pages CMS bearbeitbar.
+
+contact:
+  email_user: foerderverein-kirchenmusik
+  email_domain: luther-basel.ch
+  postal_address: |
+    c/o Evangelisch-Lutherische Kirche Basel und Nordwestschweiz
+    Friedensgasse 57
+    4056 Basel
+
+membership:
+  fee_text: "mindestens CHF 30 / Kalenderjahr"
+  iban: "CH57 0900 1657 1780 0"
+  bic: "POFICHBEXXX"
+  bank: "PostFinance"
+  beneficiary: "Förderverein Kirchenmusik in der Kartäuserkirche, 4056 Basel"
+  reference_donation: "Spende Förderverein Kirchenmusik"
+  reference_membership: "Mitgliedsbeitrag Förderverein Kirchenmusik"
+
+documents:
+  statuten: /media/statuten_foerderverein_kirchenmusik.pdf
+  beitrittstalon: /media/beitrittstalon.pdf

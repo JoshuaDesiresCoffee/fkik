@@ -1,0 +1,23 @@
+{{- /* Returns a dict with German-formatted date parts.
+       Input: a time.Time (typically .Date)
+       Output: dict with .day, .month, .year, .time, .datetime, .display
+       Usage: {{ $d := partial "event-date.html" .Date }}
+              {{ $d.day }}. {{ $d.month }} {{ $d.year }}
+*/ -}}
+{{- $months := slice "" "Januar" "Februar" "März" "April" "Mai" "Juni" "Juli" "August" "September" "Oktober" "November" "Dezember" -}}
+{{- $weekdays := slice "Sonntag" "Montag" "Dienstag" "Mittwoch" "Donnerstag" "Freitag" "Samstag" -}}
+{{- $month := index $months (int .Month) -}}
+{{- $weekday := index $weekdays (int .Weekday) -}}
+{{- $time := .Format "15:04" -}}
+{{- $hasTime := ne $time "00:00" -}}
+{{- return (dict
+    "day"      (.Format "2")
+    "month"    $month
+    "year"     (.Format "2006")
+    "time"     $time
+    "hasTime"  $hasTime
+    "datetime" (cond $hasTime (.Format "2006-01-02T15:04") (.Format "2006-01-02"))
+    "display"  (cond $hasTime
+                 (printf "%s, %s. %s %s · %s Uhr" $weekday (.Format "2") $month (.Format "2006") $time)
+                 (printf "%s, %s. %s %s" $weekday (.Format "2") $month (.Format "2006")))
+) -}}

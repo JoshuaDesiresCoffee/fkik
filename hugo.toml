@@ -4,7 +4,7 @@ defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 buildFuture      = true
 
-# Language-neutral site params (shared across all languages)
+# Festwerte (selten ändernd) — User-editierbare Inhalte stehen in data/site.yaml
 [params]
   orgName        = 'Förderverein Kirchenmusik in der Kartäuserkirche'
   orgShortName   = 'Förderverein Kirchenmusik Kartäuserkirche'
@@ -14,20 +14,10 @@ buildFuture      = true
   venueCity      = 'Basel'
   venueRegion    = 'BS'
   venueCountry   = 'CH'
+  venuePostalCode = '4058'
   ogImage        = '/media/kantorei.png'
   ogImageWidth   = '1200'
   ogImageHeight  = '630'
-  emailUser      = 'foerderverein-kirchenmusik'
-  emailDomain    = 'luther-basel.ch'
-
-[params.membership]
-  mitgliedsbeitrag = 'mindestens CHF 30.– / Kalenderjahr'
-  iban             = 'CH57 0900 1657 1780 0'
-  bic              = 'POFICHBEXXX'
-  beguenstigter    = 'Förderverein Kirchenmusik in der Kartäuserkirche, 4056 Basel'
-  bank             = 'PostFinance'
-  vermerk_spende   = 'Spende Förderverein Kirchenmusik'
-  vermerk_beitrag  = 'Mitgliedsbeitrag Förderverein Kirchenmusik'
 
 [languages]
   [languages.de]

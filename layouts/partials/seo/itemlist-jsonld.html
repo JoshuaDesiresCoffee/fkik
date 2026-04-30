@@ -9,6 +9,7 @@
   "url": {{ .Permalink | jsonify }},
   "itemListElement": [
     {{ range $i, $ev := $upcoming }}{{ if $i }},{{ end }}
+    {{- $d := partial "event-date.html" $ev.Date -}}
     {
       "@type": "ListItem",
       "position": {{ add $i 1 }},
@@ -16,12 +17,12 @@
         "@type": "Event",
         "name": {{ $ev.Title | jsonify }},
         "description": {{ $ev.Params.description | jsonify }},
-        "startDate": {{ $ev.Params.eventDatetime | jsonify }},
+        "startDate": {{ $d.datetime | jsonify }},
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
           "@type": "Place",
-          "name": {{ $ev.Params.locationName | default $.Site.Params.venueName | jsonify }},
+          "name": {{ $.Site.Params.venueName | jsonify }},
           "address": {
             "@type": "PostalAddress",
             "addressLocality": {{ $.Site.Params.venueCity | jsonify }},

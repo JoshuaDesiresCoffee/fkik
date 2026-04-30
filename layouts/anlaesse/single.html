@@ -29,14 +29,11 @@
         {{ with .Params.performers }}
         <section class="event-section" aria-labelledby="performers-heading">
           <h2 class="event-section__heading" id="performers-heading">{{ i18n "event_performers_heading" }}</h2>
-          <dl class="performers-list">
+          <ul class="performers-list">
             {{ range . }}
-            <div class="performers-item">
-              <dt>{{ .role }}</dt>
-              <dd>{{ .name }}</dd>
-            </div>
+            <li class="performers-item">{{ . }}</li>
             {{ end }}
-          </dl>
+          </ul>
         </section>
         {{ end }}
 

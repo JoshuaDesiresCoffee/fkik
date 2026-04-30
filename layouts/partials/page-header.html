@@ -10,20 +10,21 @@
     <p class="page-header__subtitle">{{ . }}</p>
     {{ end }}
     {{ if .showEventMeta }}
+    {{- $d := partial "event-date.html" .page.Date }}
     <ul class="event-header-meta" aria-label="{{ i18n "event_meta_aria" }}">
       <li class="event-header-meta__item">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        <time datetime="{{ .page.Params.eventDatetime }}">{{ .page.Params.eventDateDisplay }}</time>
+        <time datetime="{{ $d.datetime }}">{{ $d.display }}</time>
       </li>
       <li class="event-header-meta__item">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
           <circle cx="12" cy="10" r="3"></circle>
         </svg>
-        <span>{{ .page.Params.location }}</span>
+        <span>{{ $.Site.Params.venueName }}</span>
       </li>
       {{ with .page.Params.admission }}
       <li class="event-header-meta__item">

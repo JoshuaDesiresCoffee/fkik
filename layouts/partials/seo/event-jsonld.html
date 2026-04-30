@@ -1,11 +1,12 @@
 {{- /* Expects . = an anlaesse Page */ -}}
+{{- $d := partial "event-date.html" .Date -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Event",
   "name": {{ .Title | jsonify }},
   "description": {{ .Params.description | jsonify }},
-  "startDate": {{ .Params.eventDatetime | jsonify }},
+  "startDate": {{ $d.datetime | jsonify }},
   "eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "inLanguage": {{ .Site.Params.inLanguage | jsonify }},
@@ -14,11 +15,11 @@
   "image": {{ printf "%smedia/kantorei.png" .Site.BaseURL | jsonify }},
   "location": {
     "@type": "Place",
-    "name": {{ .Params.locationName | default .Site.Params.venueName | jsonify }},
+    "name": {{ .Site.Params.venueName | jsonify }},
     "address": {
       "@type": "PostalAddress",
       "addressLocality": {{ .Site.Params.venueCity | jsonify }},
-      "postalCode": {{ .Params.postalCode | default "4058" | jsonify }},
+      "postalCode": {{ .Site.Params.venuePostalCode | default "4058" | jsonify }},
       "addressCountry": {{ .Site.Params.venueCountry | jsonify }}
     }
   },
@@ -27,7 +28,7 @@
     "@id": {{ printf "%s#organization" .Site.BaseURL | jsonify }}
   }{{ with .Params.performers }},
   "performer": [{{ range $i, $p := . }}{{ if $i }},{{ end }}
-    { "@type": "PerformingGroup", "name": {{ $p.name | jsonify }} }{{ end }}
+    { "@type": "PerformingGroup", "name": {{ $p | jsonify }} }{{ end }}
   ]{{ end }}{{ if .Params.isFree }},
   "offers": {
     "@type": "Offer",

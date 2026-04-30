@@ -1,15 +1,16 @@
 {{- /* Expects . = an anlaesse Page */ -}}
+{{- $d := partial "event-date.html" .Date -}}
 <a href="{{ .RelPermalink }}" class="past-event-card" role="listitem"
    itemscope itemtype="https://schema.org/Event">
   <div class="past-event-card__date" aria-hidden="true">
-    <span class="past-event-card__day">{{ .Params.eventDay }}</span>
-    <span class="past-event-card__month">{{ .Params.eventMonth }}</span>
-    <span class="past-event-card__year">{{ .Params.eventYear }}</span>
+    <span class="past-event-card__day">{{ $d.day }}</span>
+    <span class="past-event-card__month">{{ $d.month }}</span>
+    <span class="past-event-card__year">{{ $d.year }}</span>
   </div>
   <div class="past-event-card__body">
     <span class="past-event-card__type">{{ .Params.eventType }}</span>
     <p class="past-event-card__title" itemprop="name">{{ .Title }}</p>
-    <p class="past-event-card__location" itemprop="location">{{ .Params.location }}</p>
+    <p class="past-event-card__location" itemprop="location">{{ $.Site.Params.venueName }}</p>
   </div>
   <svg class="past-event-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <line x1="5" y1="12" x2="19" y2="12"></line>

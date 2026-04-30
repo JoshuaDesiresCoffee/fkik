@@ -1,13 +1,8 @@
 ---
 title: "Über uns"
 description: "Förderverein Kirchenmusik in der Kartäuserkirche Basel: 2024 gegründeter, gemeinnütziger Verein zur Unterstützung von Kantatengottesdiensten, Konzerten und Orgelmusik in der Kartäuserkirche."
-keywords: "Förderverein Kirchenmusik Basel, Kartäuserkirche Verein, Vorstand, Kantatengottesdienst, Arp Schnitger Orgel"
-ogTitle: "Über uns | Förderverein Kirchenmusik Kartäuserkirche Basel"
-ogDescription: "2024 gegründeter, gemeinnütziger Verein zur Förderung von Kirchenmusik in der Kartäuserkirche Basel."
 pageSubtitle: "Wir unterstützen Kirchenmusik-Anlässe der Evangelisch-Lutherischen Kirche Basel und Nordwestschweiz in der Kartäuserkirche."
 schemaType: "AboutPage"
-
-foundingYear: "2024"
 
 vereinHeadline: "Ein historischer Raum für überlieferte Kirchenmusik"
 vereinStatNumber: "2024"

@@ -12,7 +12,7 @@
   },
   "description": {{ $.Site.Params.orgDescription | jsonify }},
   "foundingDate": {{ $.Site.Params.orgFounding | jsonify }},
-  "email": {{ printf "%s@%s" $.Site.Params.emailUser $.Site.Params.emailDomain | jsonify }},
+  "email": {{ printf "%s@%s" $.Site.Data.site.contact.email_user $.Site.Data.site.contact.email_domain | jsonify }},
   "location": {
     "@type": "Place",
     "name": {{ $.Site.Params.venueName | jsonify }},
