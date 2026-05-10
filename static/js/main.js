@@ -160,11 +160,16 @@ document.addEventListener('DOMContentLoaded', () => {
     lb.setAttribute('role', 'dialog');
     lb.setAttribute('aria-modal', 'true');
     lb.setAttribute('aria-label', 'Bildansicht');
+    const svgChevL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>';
+    const svgChevR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>';
+    const svgX     = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
     lb.innerHTML =
-      '<button class="gallery-lb__close" aria-label="Schliessen">×</button>' +
-      '<button class="gallery-lb__prev" aria-label="Vorheriges Bild">‹</button>' +
-      '<img class="gallery-lb__img" src="" alt="">' +
-      '<button class="gallery-lb__next" aria-label="Nächstes Bild">›</button>';
+      '<button class="gallery-lb__close" aria-label="Schliessen">' + svgX + '</button>' +
+      '<div class="gallery-lb__row">' +
+        '<button class="gallery-lb__prev" aria-label="Vorheriges Bild">' + svgChevL + '</button>' +
+        '<img class="gallery-lb__img" src="" alt="">' +
+        '<button class="gallery-lb__next" aria-label="Nächstes Bild">' + svgChevR + '</button>' +
+      '</div>';
     document.body.appendChild(lb);
 
     let lbImgs = [], lbCur = 0, lbTrigger = null;
