@@ -61,10 +61,12 @@
           {{ i18n "event_gallery_headline" }}
         </h2>
       </header>
-      <div class="event-gallery__grid" role="list" aria-label="{{ i18n "event_gallery_aria" }}">
-        {{ range . }}
-        <figure class="event-gallery__item" role="listitem">
-          <img src="{{ .src | relURL }}" alt="{{ .alt }}" width="800" height="600" loading="lazy">
+      <div class="event-gallery__grid" role="list" aria-label="{{ i18n "event_gallery_aria" }}" data-gallery>
+        {{ range $i, $img := . }}
+        <figure class="event-gallery__item" role="listitem"{{ if ge $i 3 }} data-gallery-extra{{ end }}>
+          <button class="gallery-btn" type="button">
+            <img src="{{ $img.src | relURL }}" alt="{{ $img.alt }}" width="800" height="600" loading="lazy">
+          </button>
         </figure>
         {{ end }}
       </div>

@@ -1,0 +1,24 @@
+{{- $eyebrow    := .eyebrow -}}
+{{- $headingID  := .headingID -}}
+{{- $headline   := .headline -}}
+{{- $ariaLabel  := .ariaLabel -}}
+{{- with .images }}
+<section class="gallery-section" aria-labelledby="{{ $headingID }}">
+  <div class="container">
+    <header class="gallery-section__header">
+      <span class="eyebrow">{{ $eyebrow }}</span>
+      <h2 id="{{ $headingID }}" class="section-headline">{{ $headline }}</h2>
+    </header>
+    <div class="gallery-grid" role="list" aria-label="{{ $ariaLabel }}" data-gallery>
+      {{- range $i, $img := . }}
+      <div class="gallery-item" role="listitem"{{ if ge $i 3 }} data-gallery-extra{{ end }}>
+        <button class="gallery-btn" type="button">
+          <img src="{{ $img.src | default "media/kantorei.png" | relURL }}" alt="{{ $img.alt }}"
+               width="800" height="600" loading="lazy">
+        </button>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

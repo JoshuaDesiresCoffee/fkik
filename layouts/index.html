@@ -120,34 +120,13 @@
     </div>
   </section>
 
-  <section class="gallery-section" aria-labelledby="gallery-heading">
-    <div class="container">
-      <header class="gallery-section__header">
-        <span class="eyebrow">{{ i18n "gallery_eyebrow" }}</span>
-        <h2 id="gallery-heading" class="section-headline">{{ i18n "gallery_headline" }}</h2>
-      </header>
-      {{- $gallery := .Params.gallery }}
-      <div class="gallery-grid" role="list" aria-label="{{ i18n "gallery_aria" }}">
-        <div class="gallery-item" role="listitem">
-          <img src="{{ ((index $gallery 0).src | default "media/kantorei.png") | relURL }}"
-               alt="{{ (index $gallery 0).alt }}"
-               width="840" height="480" loading="lazy">
-        </div>
-        <div class="gallery-item" role="listitem">
-          <img src="{{ ((index $gallery 1).src | default "media/kantorei.png") | relURL }}"
-               alt="{{ (index $gallery 1).alt }}"
-               width="600" height="240" loading="lazy"
-               style="object-position: center 10%;">
-        </div>
-        <div class="gallery-item" role="listitem">
-          <img src="{{ ((index $gallery 2).src | default "media/kantorei.png") | relURL }}"
-               alt="{{ (index $gallery 2).alt }}"
-               width="600" height="240" loading="lazy"
-               style="object-position: right 60%;">
-        </div>
-      </div>
-    </div>
-  </section>
+  {{ partial "gallery.html" (dict
+    "images"    .Params.gallery
+    "eyebrow"   (i18n "gallery_eyebrow")
+    "headingID" "gallery-heading"
+    "headline"  (i18n "gallery_headline")
+    "ariaLabel" (i18n "gallery_aria")
+  ) }}
 
   <section class="join-section" aria-labelledby="join-heading">
     <div class="container">
