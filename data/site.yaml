@@ -2,8 +2,8 @@ contact:
   email_user: foerderverein-kirchenmusik
   email_domain: luther-basel.ch
   venue_name: Kartäuserkirche Basel
-  venue_address: "Theodorskirchpl. 7, 4058 Basel"
-  venue_map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=7.5880%2C47.5455%2C7.5940%2C47.5490&layer=mapnik&marker=47.5472%2C7.5907"
+  venue_address: "Theodorskirchplatz 7, 4058 Basel"
+  venue_map_embed_url: "https://www.openstreetmap.org/export/embed.html?bbox=7.595369517803193,47.55735308977626,7.5981536507606515,47.559012919433584&layer=mapnik&marker=47.55818301117765,7.596761584281921"
   venue_map_external_url: "https://maps.google.com/?q=Theodorskirchpl.+7,+4058+Basel"
   postal_address: |
     c/o Evangelisch-Lutherische Kirche Basel und Nordwestschweiz

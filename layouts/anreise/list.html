@@ -21,15 +21,13 @@
         <span class="eyebrow">{{ i18n "anreise_map_eyebrow" }}</span>
         <h2 id="map-heading" class="section-headline">{{ i18n "anreise_map_heading" }}</h2>
       </header>
-
+      
       <div class="anreise-cols">
-
-        {{/* Map embed with custom pin overlay */}}
         <div class="map-embed">
           {{ with $s.contact.venue_map_embed_url }}
           <div class="map-embed__frame">
             <iframe
-              src="{{ . }}"
+              src="{{ . | safeURL }}"
               title="{{ i18n "anreise_map_aria" }}"
               loading="lazy"
               allowfullscreen
@@ -37,18 +35,6 @@
             ></iframe>
           </div>
           {{ end }}
-          <div class="map-embed__bar">
-            {{ with $s.contact.venue_map_external_url }}
-            <a href="{{ . }}" class="map-embed__link" target="_blank" rel="noopener noreferrer">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-              {{ i18n "anreise_map_open" }}
-            </a>
-            {{ end }}
-          </div>
         </div>
 
         {{/* Location info aside */}}
