@@ -20,6 +20,16 @@
   flex-shrink: 0;
 }
 
+.event-header-meta__link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  text-underline-offset: 2px;
+}
+.event-header-meta__link:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+}
+
 @media (max-width: 480px) {
   .event-header-meta__item { font-size: var(--text-sm); }
 }

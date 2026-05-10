@@ -240,6 +240,10 @@ content:
           - name: pageSubtitle
             label: Untertitel
             type: string
+          - name: wheelchairText
+            label: Barrierefreiheit – Text
+            type: text
+            description: "Hinweis zur Rollstuhlzugänglichkeit. Leer lassen, um die Notiz auszublenden."
           - name: transitTramTitle
             label: Tram & Bus – Titel
             type: string
@@ -264,10 +268,6 @@ content:
           - name: transitBikeText
             label: Velo – Text
             type: text
-          - name: wheelchairText
-            label: Barrierefreiheit – Text
-            type: text
-            description: "Hinweis zur Rollstuhlzugänglichkeit. Leer lassen, um die Notiz auszublenden."
 
       - name: kontakt
         label: Kontakt
