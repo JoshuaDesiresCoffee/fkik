@@ -94,6 +94,21 @@ content:
     type: group
     items:
 
+      - name: anlaesse-page
+        label: Anlässe
+        type: file
+        path: content/anlaesse/_index.de.md
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Kurzbeschreibung (für Suchmaschinen)
+            type: text
+          - name: pageSubtitle
+            label: Untertitel
+            type: string
+
       - name: startseite
         label: Startseite
         type: file
