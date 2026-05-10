@@ -895,3 +895,59 @@ address {
     color: var(--ink-muted);
   }
 }
+
+
+/* ════════════════════════════════════════════════════════════════════════════
+   PROSE – rich-text body content
+   ════════════════════════════════════════════════════════════════════════════ */
+.prose {
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+.prose h2 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--heading);
+  margin-top: var(--s10);
+  margin-bottom: var(--s3);
+}
+
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose h3 {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--heading);
+  margin-top: var(--s6);
+  margin-bottom: var(--s2);
+}
+
+.prose p {
+  font-size: var(--text-base);
+  margin-bottom: var(--s4);
+  max-width: 68ch;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--s8) 0;
+}
+
+.prose a {
+  color: var(--lit);
+  font-weight: 500;
+  text-underline-offset: 0.2em;
+}
+
+.prose a:hover {
+  text-decoration: none;
+}

@@ -40,6 +40,12 @@
   color: var(--ink-muted);
 }
 
+.event-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--s8) 0;
+}
+
 
 /* ── Section ─────────────────────────────────────────────────────────────── */
 .event-section {
@@ -91,9 +97,7 @@
 
 /* ── Back Link ───────────────────────────────────────────────────────────── */
 .event-back {
-  margin-top: var(--s10);
-  padding-top: var(--s6);
-  border-top: 1px solid var(--border);
+  margin-top: var(--s12);
 }
 
 .event-back__link {

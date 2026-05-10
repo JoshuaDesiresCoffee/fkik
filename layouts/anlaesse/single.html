@@ -20,10 +20,10 @@
       <div class="event-content">
 
         <span class="eyebrow">{{ i18n "event_about_eyebrow" }}</span>
-        {{ if .Content }}
-        <div class="event-lead">{{ .Content }}</div>
-        {{ else }}
         <p class="event-lead">{{ .Params.description }}</p>
+        {{ with .Content }}
+        <hr class="event-rule">
+        <div class="prose">{{ . }}</div>
         {{ end }}
 
         {{ with .Params.performers }}
