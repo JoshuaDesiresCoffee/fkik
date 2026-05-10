@@ -16,7 +16,7 @@ c/o Evangelisch-Lutherische Kirche Basel und Nordwestschweiz
 Friedensgasse 57
 CH-4056 Basel
 
-**E-Mail:** <a href="#" class="js-email" data-u="foerderverein-kirchenmusik" data-d="luther-basel.ch" aria-label="E-Mail senden">foerderverein-kirchenmusik [at] luther-basel.ch</a>
+**E-Mail:** <a href="#" class="js-email" data-u="info" data-d="fkik.ch" aria-label="E-Mail senden">info [at] fkik.ch</a>
 
 **Verantwortlich für den Inhalt:** Vorstand des Fördervereins Kirchenmusik in der Kartäuserkirche
 

@@ -19,6 +19,9 @@
             {{ range $nav.footer }}
             <li><a href="{{ .url }}" class="site-footer__link">{{ .name }}</a></li>
             {{ end }}
+            {{ with $.Site.Data.site.documents.statuten }}
+            <li><a href="{{ . }}" class="site-footer__link" target="_blank" rel="noopener">{{ i18n "board_info_statuten" }}</a></li>
+            {{ end }}
           </ul>
         </nav>
       </div>

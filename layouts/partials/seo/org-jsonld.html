@@ -15,7 +15,7 @@
   "email": {{ printf "%s@%s" $.Site.Data.site.contact.email_user $.Site.Data.site.contact.email_domain | jsonify }},
   "location": {
     "@type": "Place",
-    "name": {{ $.Site.Params.venueName | jsonify }},
+    "name": {{ ($.Site.Data.site.contact.venue_name | default $.Site.Params.venueName) | jsonify }},
     "address": {
       "@type": "PostalAddress",
       "addressLocality": {{ $.Site.Params.venueCity | jsonify }},

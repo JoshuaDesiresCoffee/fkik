@@ -283,6 +283,10 @@ content:
             label: E-Mail (nach @)
             type: string
             description: "Beispiel: «example.ch»"
+          - name: venue_name
+            label: Veranstaltungsort (Anzeigename)
+            type: string
+            description: "Wird bei Anlässen als Ort angezeigt."
           - name: postal_address
             label: Vereinspost-Adresse
             type: text

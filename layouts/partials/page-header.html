@@ -24,7 +24,7 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
           <circle cx="12" cy="10" r="3"></circle>
         </svg>
-        <span>{{ $.Site.Params.venueName }}</span>
+        <span>{{ .page.Site.Data.site.contact.venue_name | default .page.Site.Params.venueName }}</span>
       </li>
       {{ with .page.Params.admission }}
       <li class="event-header-meta__item">

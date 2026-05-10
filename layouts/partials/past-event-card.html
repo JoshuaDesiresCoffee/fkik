@@ -10,7 +10,7 @@
   <div class="past-event-card__body">
     <span class="past-event-card__type">{{ .Params.eventType }}</span>
     <p class="past-event-card__title" itemprop="name">{{ .Title }}</p>
-    <p class="past-event-card__location" itemprop="location">{{ $.Site.Params.venueName }}</p>
+    <p class="past-event-card__location" itemprop="location">{{ $.Site.Data.site.contact.venue_name | default $.Site.Params.venueName }}</p>
   </div>
   <svg class="past-event-card__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <line x1="5" y1="12" x2="19" y2="12"></line>
