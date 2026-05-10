@@ -95,6 +95,9 @@ content:
       - name: description
         label: Kurzbeschreibung (für Suchmaschinen)
         type: text
+      - name: heroImage
+        label: Hero – Bild
+        type: image
       - name: heroYear
         label: Hero – Jahr
         type: string

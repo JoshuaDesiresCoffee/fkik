@@ -15,9 +15,12 @@ vereinText2: "Unser Zweck: den überaus reichen Schatz an überlieferter Kirchen
 vereinText3: "Die Kartäuserkirche – von 1408 bis 1416 als Klosterkirche erbaut und seit 1962 von der Evangelisch-Lutherischen Kirche genutzt – beherbergt eine 1994 von Bernhardt H. Edskes (Wohlen) gebaute Kopie der Arp Schnitger-Orgel von 1694. Architektur, Akustik und Instrument bilden einen einzigartigen Rahmen für barocke und insbesondere norddeutsche Kirchenmusik."
 
 gallery:
-  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
-  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
-  - alt: "Innenraum der Kartäuserkirche Basel mit barocker Arp Schnitger-Orgel"
+  - src: "media/vorstand.jpg"
+    alt: "Vorstand des Fördervereins Kirchenmusik in der Kartäuserkirche"
+  - src: "media/kirchengebäude_innen.jpg"
+    alt: "Innenraum der Kartäuserkirche Basel"
+  - src: "media/chor_mit_gemeinde.jpg"
+    alt: "Chor mit Gemeinde bei einem Kantatengottesdienst"
 
 boardInfoPre: "Der Vorstand wird jährlich von der Generalversammlung gewählt. Die Generalversammlung findet alljährlich statt und sollte spätestens 6 Monate nach Abschluss des Geschäftsjahres durchgeführt werden. Unsere"
 boardInfoPost: "stehen zum Download bereit."
