@@ -26,9 +26,7 @@
         </p>
         <p>
           Vereinspost:<br>
-          c/o Evangelisch-Lutherische Kirche Basel und Nordwestschweiz<br>
-          Friedensgasse 57<br>
-          CH-4056 Basel
+          {{ $c.postal_address | replaceRE "\n" "<br>" | safeHTML }}
         </p>
         <p>
           <strong>E-Mail:</strong>
