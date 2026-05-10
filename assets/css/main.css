@@ -659,6 +659,10 @@ address {
   .features {
     grid-template-columns: 1fr 1fr;
   }
+
+  .feature-card:last-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 600px) {
