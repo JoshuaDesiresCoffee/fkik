@@ -12,7 +12,7 @@
   "inLanguage": {{ .Site.Params.inLanguage | jsonify }},
   "isAccessibleForFree": {{ .Params.isFree | default false }},
   "url": {{ .Permalink | jsonify }},
-  "image": {{ with index .Params.images 0 }}{{ printf "%s%s" $.Site.BaseURL .src | jsonify }}{{ else }}{{ printf "%smedia/chor.jpg" .Site.BaseURL | jsonify }}{{ end }},
+  "image": {{ with index .Params.images 0 }}{{ .src | absURL | jsonify }}{{ else }}{{ "media/chor.jpg" | absURL | jsonify }}{{ end }},
   "location": {
     "@type": "Place",
     "name": {{ (.Site.Data.site.contact.venue_name | default .Site.Params.venueName) | jsonify }},
