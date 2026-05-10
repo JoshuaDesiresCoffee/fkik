@@ -129,6 +129,7 @@
 
 .scroller.is-stuck .scroller__brand {
   color: var(--ink);
+  pointer-events: auto;
 }
 
 
