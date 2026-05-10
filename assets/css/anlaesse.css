@@ -24,7 +24,7 @@
 .events-list {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: var(--grid-gap);
   background: var(--border);
 }
 
@@ -246,7 +246,7 @@
 .past-events-list {
   display: none;
   flex-direction: column;
-  gap: 3px;
+  gap: var(--grid-gap);
   background: var(--border);
 }
 
@@ -280,7 +280,7 @@
 .past-event-card__date {
   padding: var(--s4) var(--s3);
   text-align: center;
-  border-right: 3px solid var(--border);
+  border-right: var(--grid-gap) solid var(--border);
 }
 
 .past-event-card__day {

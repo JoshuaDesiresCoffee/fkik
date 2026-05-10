@@ -30,13 +30,16 @@
 .board-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 3px;
-  background: var(--border);
+  gap: 0;
+  background: var(--bg-warm);
+  clip-path: inset(0 var(--grid-gap) var(--grid-gap) 0);
 }
 
 .person-card {
   background: var(--bg-warm);
   padding: var(--s4) var(--s4);
+  border-right: var(--grid-gap) solid var(--border);
+  border-bottom: var(--grid-gap) solid var(--border);
   display: flex;
   flex-direction: column;
   gap: var(--s1);

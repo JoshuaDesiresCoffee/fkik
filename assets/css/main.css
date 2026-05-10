@@ -58,6 +58,9 @@
   /* Motion */
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --dur: 180ms;
+
+  /* Grid */
+  --grid-gap: var(--grid-gap);
 }
 
 /* ─── Liturgical colour themes ────────────────────────────────────────────── */
@@ -604,7 +607,7 @@ address {
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  gap: var(--grid-gap);
   background: var(--border);
 }
 
@@ -689,7 +692,7 @@ address {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 240px 240px;
-  gap: 3px;
+  gap: var(--grid-gap);
   background: var(--border);
 }
 
