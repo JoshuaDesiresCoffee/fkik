@@ -12,10 +12,52 @@
 {{ end }}
 
 {{ define "main" }}
+{{- $c := .Site.Data.site.contact -}}
   <section class="kontakt-section">
     <div class="container">
       <div class="prose" style="max-width:72ch;padding:var(--s12) 0;">
-        {{ .Content }}
+
+        <h2>Betreiber dieser Website</h2>
+        <p>
+          <strong>Förderverein Kirchenmusik in der Kartäuserkirche</strong><br>
+          Rechtsform: Verein gemäss Art. 60ff des Schweizerischen Zivilgesetzbuches (ZGB)<br>
+          Sitz: Basel<br>
+          Gegründet: 4. September 2024
+        </p>
+        <p>
+          Vereinspost:<br>
+          c/o Evangelisch-Lutherische Kirche Basel und Nordwestschweiz<br>
+          Friedensgasse 57<br>
+          CH-4056 Basel
+        </p>
+        <p>
+          <strong>E-Mail:</strong>
+          <a href="#" class="js-email"
+             data-u="{{ $c.email_user }}"
+             data-d="{{ $c.email_domain }}"
+             aria-label="E-Mail senden">{{ $c.email_user }} [at] {{ $c.email_domain }}</a>
+        </p>
+        <p><strong>Verantwortlich für den Inhalt:</strong> Vorstand des Fördervereins Kirchenmusik in der Kartäuserkirche</p>
+
+        <hr>
+
+        <h2>Haftungsausschluss</h2>
+        <h3>Inhalt</h3>
+        <p>Der Vorstand übernimmt keinerlei Gewähr hinsichtlich der inhaltlichen Richtigkeit, Genauigkeit, Aktualität, Zuverlässigkeit und Vollständigkeit der auf dieser Website veröffentlichten Informationen. Haftungsansprüche wegen Schäden materieller oder immaterieller Art, die aus dem Zugriff oder der Nutzung bzw. Nichtnutzung dieser Informationen entstehen, werden ausgeschlossen.</p>
+        <h3>Externe Links</h3>
+        <p>Diese Website enthält Links zu Websites Dritter. Diese unterliegen der Haftung der jeweiligen Betreiber. Zum Zeitpunkt der Verlinkung waren keine Rechtsverletzungen erkennbar. Bei Bekanntwerden von Rechtsverletzungen werden entsprechende Links umgehend entfernt.</p>
+
+        <hr>
+
+        <h2>Urheberrecht</h2>
+        <p>Die auf dieser Website veröffentlichten Inhalte sind urheberrechtlich geschützt. Alle Rechte vorbehalten. Vervielfältigung oder Verwendung — auch auszugsweise — bedarf der ausdrücklichen schriftlichen Genehmigung des Fördervereins.</p>
+
+        <hr>
+
+        <h2>Datenschutz</h2>
+        <p>Diese Website erhebt keine personenbezogenen Daten und setzt keine Cookies. Es werden keine Analyse- oder Tracking-Werkzeuge eingesetzt.</p>
+        <p>Für die Darstellung der Schriftarten werden Google Fonts eingebunden. Dabei kann eine Verbindung zu Servern von Google LLC, USA, hergestellt werden. Es gelten die <a href="https://policies.google.com/privacy">Datenschutzbestimmungen von Google</a>.</p>
+
       </div>
     </div>
   </section>

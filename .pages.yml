@@ -242,27 +242,6 @@ content:
         type: text
 
   # ──────────────────────────────────────────────
-  # IMPRESSUM
-  # ──────────────────────────────────────────────
-  - name: impressum
-    label: Impressum
-    type: file
-    path: content/impressum/_index.de.md
-    fields:
-      - name: title
-        label: Titel
-        type: string
-      - name: description
-        label: Kurzbeschreibung (für Suchmaschinen)
-        type: text
-      - name: pageSubtitle
-        label: Untertitel
-        type: string
-      - name: body
-        label: Inhalt
-        type: rich-text
-
-  # ──────────────────────────────────────────────
   # VEREINSEINSTELLUNGEN – E-Mail, IBAN, PDFs
   # ──────────────────────────────────────────────
   - name: einstellungen
