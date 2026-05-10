@@ -2,7 +2,7 @@
 
 {{ define "hero" }}
 <div class="v4-image">
-  <img src="{{ (.Params.heroImage | default "media/kantorei.png") | relURL }}"
+  <img src="{{ .Params.heroImage | relURL }}"
        alt="{{ $.Site.Params.ogImageAlt }}"
        fetchpriority="high">
 </div>

@@ -15,7 +15,7 @@ buildFuture      = true
   venueRegion    = 'BS'
   venueCountry   = 'CH'
   venuePostalCode = '4058'
-  ogImage        = '/media/kantorei.png'
+  ogImage        = '/media/chor.jpg'
   ogImageWidth   = '1200'
   ogImageHeight  = '630'
 

@@ -13,7 +13,7 @@
       {{- range $i, $img := . }}
       <div class="gallery-item" role="listitem"{{ if ge $i 3 }} data-gallery-extra{{ end }}>
         <button class="gallery-btn" type="button">
-          <img src="{{ $img.src | default "media/kantorei.png" | relURL }}" alt="{{ $img.alt }}"
+          <img src="{{ $img.src | relURL }}" alt="{{ $img.alt }}"
                width="800" height="600" loading="lazy">
         </button>
       </div>
