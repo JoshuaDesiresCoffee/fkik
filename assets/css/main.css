@@ -60,7 +60,7 @@
   --dur: 180ms;
 
   /* Grid */
-  --grid-gap: var(--grid-gap);
+  --grid-gap: 3px;
 }
 
 /* ─── Liturgical colour themes ────────────────────────────────────────────── */
