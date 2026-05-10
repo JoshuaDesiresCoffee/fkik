@@ -16,6 +16,8 @@ content:
         label: Anlässe
         type: collection
         path: content/anlaesse
+        exclude:
+          - _index.de.md
         extension: md
         view:
           fields: [title, date, eventType, draft]
