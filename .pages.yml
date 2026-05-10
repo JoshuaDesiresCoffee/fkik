@@ -226,6 +226,49 @@ content:
             label: Aufruf – Beschreibung
             type: text
 
+      - name: anreise
+        label: Anreise
+        type: file
+        path: content/anreise/_index.de.md
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Kurzbeschreibung (für Suchmaschinen)
+            type: text
+          - name: pageSubtitle
+            label: Untertitel
+            type: string
+          - name: transitTramTitle
+            label: Tram & Bus – Titel
+            type: string
+          - name: transitTramText
+            label: Tram & Bus – Text
+            type: text
+          - name: transitFootTitle
+            label: Zu Fuss – Titel
+            type: string
+          - name: transitFootText
+            label: Zu Fuss – Text
+            type: text
+          - name: transitCarTitle
+            label: Auto & Parkierung – Titel
+            type: string
+          - name: transitCarText
+            label: Auto & Parkierung – Text
+            type: text
+          - name: transitBikeTitle
+            label: Velo – Titel
+            type: string
+          - name: transitBikeText
+            label: Velo – Text
+            type: text
+          - name: wheelchairText
+            label: Barrierefreiheit – Text
+            type: text
+            description: "Hinweis zur Rollstuhlzugänglichkeit. Leer lassen, um die Notiz auszublenden."
+
       - name: kontakt
         label: Kontakt
         type: file
@@ -311,6 +354,18 @@ content:
                 label: Veranstaltungsort (Anzeigename)
                 type: string
                 description: "Wird bei Anlässen als Ort angezeigt."
+              - name: venue_address
+                label: Veranstaltungsort (Adresse)
+                type: string
+                description: "Strassenadresse der Kirche. Wird auf der Anreise-Seite und im Footer angezeigt."
+              - name: venue_map_embed_url
+                label: Karte – Embed-URL
+                type: string
+                description: "Google Maps oder OSM Embed-URL für die Karte auf der Anreise-Seite und im Footer. Tipp: In Google Maps auf «Teilen › Karte einbetten» klicken und die src=-URL kopieren."
+              - name: venue_map_external_url
+                label: Karte – Externer Link
+                type: string
+                description: "Link zum Öffnen der Route in Google Maps (z.B. https://maps.google.com/?q=Kartäuserkirche+Basel)."
               - name: postal_address
                 label: Vereinspost-Adresse
                 type: text

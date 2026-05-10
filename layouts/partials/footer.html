@@ -27,11 +27,13 @@
       </div>
 
       <div>
+        {{- $s := $.Site.Data.site }}
         <p class="site-footer__col-title">{{ i18n "footer_location_col" }}</p>
         <address class="site-footer__address">
-          {{ i18n "footer_address_line1" }}<br>
-          {{ i18n "footer_address_line2" }}
+          {{ $s.contact.venue_name }}<br>
+          {{ $s.contact.venue_address }}
         </address>
+        <a href="{{ "/anreise/" | relURL }}" class="btn btn--invert btn--sm site-footer__anreise-link">{{ i18n "breadcrumb_anreise" }} →</a>
       </div>
 
     </div>

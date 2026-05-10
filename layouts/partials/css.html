@@ -20,4 +20,7 @@
 {{- else if eq .Section "impressum" }}
 {{- $css := resources.Get "css/impressum.css" | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+{{- else if eq .Section "anreise" }}
+{{- $css := resources.Get "css/anreise.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
 {{- end }}

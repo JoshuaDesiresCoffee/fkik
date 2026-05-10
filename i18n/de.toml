@@ -247,3 +247,41 @@ other = "Postadresse"
 
 [contact_address_heading]
 other = "Wo wir zu finden sind"
+
+# ─── Anreise ──────────────────────────────────────────────────────────────────
+
+[anreise_map_eyebrow]
+other = "Lage"
+
+[anreise_map_heading]
+other = "Kartäuserkirche Basel"
+
+[anreise_map_aria]
+other = "Karte mit Standort der Kartäuserkirche Basel"
+
+[anreise_map_open]
+other = "Route planen"
+
+[anreise_transit_eyebrow]
+other = "Verkehrsmittel"
+
+[anreise_transit_heading]
+other = "So erreichen Sie uns"
+
+[anreise_tram_label]
+other = "Tram & Bus"
+
+[anreise_foot_label]
+other = "Zu Fuss"
+
+[anreise_car_label]
+other = "Auto & Parkierung"
+
+[anreise_bike_label]
+other = "Velo"
+
+[breadcrumb_anreise]
+other = "Anreise"
+
+[anreise_access_label]
+other = "Barrierefreiheit"
