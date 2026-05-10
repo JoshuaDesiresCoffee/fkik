@@ -5,329 +5,335 @@ media:
 content:
 
   # ──────────────────────────────────────────────
-  # ANLÄSSE – Konzerte, Gottesdienste, Versammlungen
+  # CONTENT
   # ──────────────────────────────────────────────
-  - name: anlaesse
-    label: Anlässe
-    type: collection
-    path: content/anlaesse
-    extension: md
-    view:
-      fields: [title, date, eventType, draft]
-      primary: title
-      sort: [date, title]
-      default:
-        sort: date
-        order: desc
-    fields:
-      - name: title
-        label: Titel
-        type: string
-        required: true
-      - name: date
-        label: Datum & Uhrzeit
-        type: date
-        required: true
-        options:
-          time: true
-          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
-        description: "Wann findet der Anlass statt?"
-      - name: draft
-        label: Entwurf (noch nicht veröffentlicht)
-        type: boolean
-        default: false
-      - name: eventType
-        label: Art des Anlasses
-        type: select
-        options:
-          values:
-            - Konzert
-            - Kantatengottesdienst
-            - Mitgliederversammlung
-            - Gottesdienst
-            - Orgelkonzert
-            - Chorkonzert
-            - Sonstige
-      - name: admission
-        label: Eintritt (Text)
-        type: string
-        default: "Eintritt frei · Kollekte erbeten"
-      - name: isFree
-        label: Eintritt frei
-        type: boolean
-        default: true
-      - name: description
-        label: Kurzbeschreibung
-        type: text
-        description: "Wird in Übersicht und Detailansicht angezeigt."
-      - name: performers
-        label: Mitwirkende
-        type: string
-        list: true
-        description: "Eine Person/Gruppe pro Zeile, z.B. «Ulla Westvik (Sopran)»"
-      - name: images
-        label: Bilder vom Anlass
-        type: object
-        list: true
-        fields:
-          - name: src
-            label: Bild
-            type: image
-          - name: alt
-            label: Alt-Text
-            type: string
-      - name: body
-        label: Detailtext
-        type: rich-text
-        description: "Optional: längerer Beschreibungstext für die Detailseite."
+  - name: content
+    label: Content
+    type: group
+    items:
 
-  # ──────────────────────────────────────────────
-  # STARTSEITE
-  # ──────────────────────────────────────────────
-  - name: startseite
-    label: Startseite
-    type: file
-    path: content/_index.de.md
-    fields:
-      - name: title
-        label: Titel
-        type: string
-      - name: description
-        label: Kurzbeschreibung (für Suchmaschinen)
-        type: text
-      - name: heroImage
-        label: Hero – Bild
-        type: image
-      - name: heroYear
-        label: Hero – Jahr
-        type: string
-      - name: heroTagline
-        label: Hero – Slogan
-        type: string
-      - name: aboutHeadline
-        label: «Über uns»-Überschrift
-        type: string
-      - name: aboutStatNumber
-        label: Statistik – Zahl
-        type: string
-      - name: aboutStatLabel
-        label: Statistik – Beschriftung
-        type: string
-      - name: aboutText
-        label: «Über uns»-Text
-        type: text
-      - name: joinHeadline
-        label: «Mitmachen»-Überschrift
-        type: string
-      - name: joinText1
-        label: «Mitmachen»-Text 1
-        type: text
-      - name: joinText2
-        label: «Mitmachen»-Text 2
-        type: text
-      - name: joinQuote
-        label: Zitat
-        type: text
-      - name: joinQuoteAttribution
-        label: Quelle des Zitats
-        type: string
-      - name: gallery
-        label: Galerie
-        type: object
-        list: true
+      - name: anlaesse
+        label: Anlässe
+        type: collection
+        path: content/anlaesse
+        extension: md
+        view:
+          fields: [title, date, eventType, draft]
+          primary: title
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
         fields:
-          - name: src
-            label: Bild
-            type: image
-          - name: alt
-            label: Alt-Text
+          - name: title
+            label: Titel
             type: string
-
-  # ──────────────────────────────────────────────
-  # ÜBER UNS
-  # ──────────────────────────────────────────────
-  - name: ueber-uns
-    label: Über uns
-    type: file
-    path: content/ueber-uns/_index.de.md
-    fields:
-      - name: title
-        label: Titel
-        type: string
-      - name: description
-        label: Kurzbeschreibung (für Suchmaschinen)
-        type: text
-      - name: pageSubtitle
-        label: Untertitel
-        type: string
-      - name: vereinHeadline
-        label: Verein – Überschrift
-        type: string
-      - name: vereinStatNumber
-        label: Statistik – Zahl
-        type: string
-      - name: vereinStatLabel
-        label: Statistik – Beschriftung
-        type: string
-      - name: vereinText1
-        label: Text 1
-        type: text
-      - name: vereinText2
-        label: Text 2
-        type: text
-      - name: vereinText3
-        label: Text 3
-        type: text
-      - name: gallery
-        label: Galerie
-        type: object
-        list: true
-        fields:
-          - name: src
-            label: Bild
-            type: image
-          - name: alt
-            label: Alt-Text
+            required: true
+          - name: date
+            label: Datum & Uhrzeit
+            type: date
+            required: true
+            options:
+              time: true
+              format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+            description: "Wann findet der Anlass statt?"
+          - name: draft
+            label: Entwurf (noch nicht veröffentlicht)
+            type: boolean
+            default: false
+          - name: eventType
+            label: Art des Anlasses
+            type: select
+            options:
+              values:
+                - Konzert
+                - Kantatengottesdienst
+                - Mitgliederversammlung
+                - Gottesdienst
+                - Orgelkonzert
+                - Chorkonzert
+                - Sonstige
+          - name: admission
+            label: Eintritt (Text)
             type: string
-      - name: boardInfoPre
-        label: Vorstandsinfo (vor Statuten-Link)
-        type: text
-      - name: boardInfoPost
-        label: Vorstandsinfo (nach Statuten-Link)
-        type: string
-      - name: ctaHeadline
-        label: Aufruf – Überschrift
-        type: string
-      - name: ctaDesc
-        label: Aufruf – Beschreibung
-        type: text
-
-  # ──────────────────────────────────────────────
-  # KONTAKT
-  # ──────────────────────────────────────────────
-  - name: kontakt
-    label: Kontakt
-    type: file
-    path: content/kontakt/_index.de.md
-    fields:
-      - name: title
-        label: Titel
-        type: string
-      - name: description
-        label: Kurzbeschreibung (für Suchmaschinen)
-        type: text
-      - name: pageSubtitle
-        label: Untertitel
-        type: string
-      - name: emailText
-        label: E-Mail – Einleitungstext
-        type: text
-      - name: noteText1
-        label: Hinweistext
-        type: text
-      - name: noteText2Pre
-        label: Hinweistext (vor Anlässe-Link)
-        type: string
-      - name: membershipIntro
-        label: Mitgliedschaft – Einleitungstext
-        type: text
-      - name: donateText
-        label: Spenden – Text
-        type: text
-      - name: addressText
-        label: Adresse – Begleittext
-        type: text
-      - name: transit
-        label: Anreise – Text
-        type: text
-
-  # ──────────────────────────────────────────────
-  # VEREINSEINSTELLUNGEN – E-Mail, IBAN, PDFs
-  # ──────────────────────────────────────────────
-  - name: einstellungen
-    label: Vereinseinstellungen
-    type: file
-    path: data/site.yaml
-    format: yaml
-    fields:
-      - name: contact
-        label: Kontakt
-        type: object
-        fields:
-          - name: email_user
-            label: E-Mail (vor @)
-            type: string
-            description: "Beispiel: «info» für info@example.ch"
-          - name: email_domain
-            label: E-Mail (nach @)
-            type: string
-            description: "Beispiel: «example.ch»"
-          - name: venue_name
-            label: Veranstaltungsort (Anzeigename)
-            type: string
-            description: "Wird bei Anlässen als Ort angezeigt."
-          - name: postal_address
-            label: Vereinspost-Adresse
+            default: "Eintritt frei · Kollekte erbeten"
+          - name: isFree
+            label: Eintritt frei
+            type: boolean
+            default: true
+          - name: description
+            label: Kurzbeschreibung
             type: text
-            description: "Mehrzeilig erlaubt (Empfänger, Strasse, PLZ Ort)."
-
-      - name: membership
-        label: Mitgliedschaft & Bankverbindung
-        type: object
-        fields:
-          - name: fee_text
-            label: Mitgliedsbeitrag (Text)
+            description: "Wird in Übersicht und Detailansicht angezeigt."
+          - name: performers
+            label: Mitwirkende
             type: string
-          - name: iban
-            label: IBAN
-            type: string
-          - name: bic
-            label: BIC
-            type: string
-          - name: bank
-            label: Bank
-            type: string
-          - name: beneficiary
-            label: Begünstigter
-            type: string
-          - name: reference_donation
-            label: Verwendungszweck Spende
-            type: string
-          - name: reference_membership
-            label: Verwendungszweck Mitgliedsbeitrag
-            type: string
-
-      - name: documents
-        label: Dokumente (PDFs)
-        type: object
-        fields:
-          - name: statuten
-            label: Statuten (PDF)
-            type: file
-            description: "Wird im Vorstandsinfo-Bereich verlinkt."
-          - name: beitrittstalon
-            label: Beitrittserklärung (PDF)
-            type: file
-            description: "Wird auf der Kontaktseite verlinkt."
+            list: true
+            description: "Eine Person/Gruppe pro Zeile, z.B. «Ulla Westvik (Sopran)»"
+          - name: images
+            label: Bilder vom Anlass
+            type: object
+            list: true
+            fields:
+              - name: src
+                label: Bild
+                type: image
+              - name: alt
+                label: Alt-Text
+                type: string
+          - name: body
+            label: Detailtext
+            type: rich-text
+            description: "Optional: längerer Beschreibungstext für die Detailseite."
 
   # ──────────────────────────────────────────────
-  # VORSTAND
+  # PAGES
   # ──────────────────────────────────────────────
-  - name: vorstand
-    label: Vorstand
-    type: file
-    path: data/de/board.yaml
-    format: yaml
-    fields:
+  - name: pages
+    label: Pages
+    type: group
+    items:
+
+      - name: startseite
+        label: Startseite
+        type: file
+        path: content/_index.de.md
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Kurzbeschreibung (für Suchmaschinen)
+            type: text
+          - name: heroImage
+            label: Hero – Bild
+            type: image
+          - name: heroYear
+            label: Hero – Jahr
+            type: string
+          - name: heroTagline
+            label: Hero – Slogan
+            type: string
+          - name: aboutHeadline
+            label: «Über uns»-Überschrift
+            type: string
+          - name: aboutStatNumber
+            label: Statistik – Zahl
+            type: string
+          - name: aboutStatLabel
+            label: Statistik – Beschriftung
+            type: string
+          - name: aboutText
+            label: «Über uns»-Text
+            type: text
+          - name: joinHeadline
+            label: «Mitmachen»-Überschrift
+            type: string
+          - name: joinText1
+            label: «Mitmachen»-Text 1
+            type: text
+          - name: joinText2
+            label: «Mitmachen»-Text 2
+            type: text
+          - name: joinQuote
+            label: Zitat
+            type: text
+          - name: joinQuoteAttribution
+            label: Quelle des Zitats
+            type: string
+          - name: gallery
+            label: Galerie
+            type: object
+            list: true
+            fields:
+              - name: src
+                label: Bild
+                type: image
+              - name: alt
+                label: Alt-Text
+                type: string
+
+      - name: ueber-uns
+        label: Über uns
+        type: file
+        path: content/ueber-uns/_index.de.md
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Kurzbeschreibung (für Suchmaschinen)
+            type: text
+          - name: pageSubtitle
+            label: Untertitel
+            type: string
+          - name: vereinHeadline
+            label: Verein – Überschrift
+            type: string
+          - name: vereinStatNumber
+            label: Statistik – Zahl
+            type: string
+          - name: vereinStatLabel
+            label: Statistik – Beschriftung
+            type: string
+          - name: vereinText1
+            label: Text 1
+            type: text
+          - name: vereinText2
+            label: Text 2
+            type: text
+          - name: vereinText3
+            label: Text 3
+            type: text
+          - name: gallery
+            label: Galerie
+            type: object
+            list: true
+            fields:
+              - name: src
+                label: Bild
+                type: image
+              - name: alt
+                label: Alt-Text
+                type: string
+          - name: boardInfoPre
+            label: Vorstandsinfo (vor Statuten-Link)
+            type: text
+          - name: boardInfoPost
+            label: Vorstandsinfo (nach Statuten-Link)
+            type: string
+          - name: ctaHeadline
+            label: Aufruf – Überschrift
+            type: string
+          - name: ctaDesc
+            label: Aufruf – Beschreibung
+            type: text
+
+      - name: kontakt
+        label: Kontakt
+        type: file
+        path: content/kontakt/_index.de.md
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: description
+            label: Kurzbeschreibung (für Suchmaschinen)
+            type: text
+          - name: pageSubtitle
+            label: Untertitel
+            type: string
+          - name: emailText
+            label: E-Mail – Einleitungstext
+            type: text
+          - name: noteText1
+            label: Hinweistext
+            type: text
+          - name: noteText2Pre
+            label: Hinweistext (vor Anlässe-Link)
+            type: string
+          - name: membershipIntro
+            label: Mitgliedschaft – Einleitungstext
+            type: text
+          - name: donateText
+            label: Spenden – Text
+            type: text
+          - name: addressText
+            label: Adresse – Begleittext
+            type: text
+          - name: transit
+            label: Anreise – Text
+            type: text
+
+  # ──────────────────────────────────────────────
+  # SETTINGS
+  # ──────────────────────────────────────────────
+  - name: settings
+    label: Settings
+    type: group
+    items:
+
       - name: vorstand
-        label: Vorstandsmitglieder
-        type: object
-        list: true
+        label: Vorstand
+        type: file
+        path: data/de/board.yaml
+        format: yaml
         fields:
-          - name: name
-            label: Name
-            type: string
-          - name: role
-            label: Funktion
-            type: string
-            description: "z.B. «Präsident», «Kassier», «Künstlerische Leitung»"
+          - name: vorstand
+            label: Vorstandsmitglieder
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Name
+                type: string
+              - name: role
+                label: Funktion
+                type: string
+                description: "z.B. «Präsident», «Kassier», «Künstlerische Leitung»"
+
+      - name: einstellungen
+        label: Vereinseinstellungen
+        type: file
+        path: data/site.yaml
+        format: yaml
+        fields:
+          - name: contact
+            label: Kontakt
+            type: object
+            fields:
+              - name: email_user
+                label: E-Mail (vor @)
+                type: string
+                description: "Beispiel: «info» für info@example.ch"
+              - name: email_domain
+                label: E-Mail (nach @)
+                type: string
+                description: "Beispiel: «example.ch»"
+              - name: venue_name
+                label: Veranstaltungsort (Anzeigename)
+                type: string
+                description: "Wird bei Anlässen als Ort angezeigt."
+              - name: postal_address
+                label: Vereinspost-Adresse
+                type: text
+                description: "Mehrzeilig erlaubt (Empfänger, Strasse, PLZ Ort)."
+
+          - name: membership
+            label: Mitgliedschaft & Bankverbindung
+            type: object
+            fields:
+              - name: fee_text
+                label: Mitgliedsbeitrag (Text)
+                type: string
+              - name: iban
+                label: IBAN
+                type: string
+              - name: bic
+                label: BIC
+                type: string
+              - name: bank
+                label: Bank
+                type: string
+              - name: beneficiary
+                label: Begünstigter
+                type: string
+              - name: reference_donation
+                label: Verwendungszweck Spende
+                type: string
+              - name: reference_membership
+                label: Verwendungszweck Mitgliedsbeitrag
+                type: string
+
+          - name: documents
+            label: Dokumente (PDFs)
+            type: object
+            fields:
+              - name: statuten
+                label: Statuten (PDF)
+                type: file
+                description: "Wird im Vorstandsinfo-Bereich verlinkt."
+              - name: beitrittstalon
+                label: Beitrittserklärung (PDF)
+                type: file
+                description: "Wird auf der Kontaktseite verlinkt."
