@@ -41,7 +41,7 @@ function getLiturgicalSeason(date) {
   const day   = date.getDate();
 
   const easter = calcEaster(year);
-  const diff   = Math.round((date - easter) / 86400000); // days relative to Easter
+  const diff   = Math.floor((date - easter) / 86400000); // days relative to Easter
 
   // ── Moving feasts relative to Easter ──────────────────────────────────────
 
@@ -124,8 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const scrollerEl = document.querySelector('.scroller');
   if (scrollerEl) {
+    const navEl = document.querySelector('.site-nav');
     const checkStuck = () => {
-      scrollerEl.classList.toggle('is-stuck', scrollerEl.getBoundingClientRect().top <= 0);
+      const scrollerStuck = scrollerEl.getBoundingClientRect().top <= 0;
+      scrollerEl.classList.toggle('is-stuck', scrollerStuck);
+      if (navEl) {
+        navEl.classList.toggle('nav-stuck', navEl.getBoundingClientRect().top <= 0);
+        navEl.classList.toggle('scroller-stuck', scrollerStuck);
+      }
     };
     window.addEventListener('scroll', checkStuck, { passive: true });
   }

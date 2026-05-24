@@ -259,4 +259,12 @@
     width: 100%;
     justify-content: center;
   }
+
+  .js-email {
+    font-size: var(--text-base);
+  }
+
+  .iban-number {
+    font-size: var(--text-md);
+  }
 }

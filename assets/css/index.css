@@ -7,8 +7,9 @@
   .site-nav {
     width: var(--panel-w);
     margin-left: var(--header-w);
-    background: transparent;
+    background: var(--panel-bg);
     border-bottom: none;
+    transition: background var(--dur) var(--ease);
   }
 
   .site-nav__inner {
@@ -17,8 +18,28 @@
     padding-left: 0;
   }
 
+  .site-nav .site-nav__link { color: var(--panel-text); }
+
+  .site-nav .site-nav__item:not(:last-child)::after {
+    background: var(--panel-text);
+    opacity: 0.35;
+  }
+
   .site-nav .site-nav__home-link { display: none; }
   .site-nav .nav-toggle-btn { display: none; }
+
+  /* Nav stuck: fade to white */
+  .site-nav.nav-stuck {
+    background: var(--bg);
+  }
+  .site-nav.nav-stuck .site-nav__link { color: var(--ink); }
+  .site-nav.nav-stuck .site-nav__item:not(:last-child)::after {
+    background: var(--border);
+    opacity: 1;
+  }
+
+  /* Scroller stuck: go transparent — scroller's white shows through */
+  .site-nav.scroller-stuck { background: transparent; }
 }
 
 .is-stuck { border-bottom: 1px solid var(--border); }
@@ -79,7 +100,7 @@
 }
 
 .v4-panel__title {
-  font-size: clamp(1.125rem, 1.8vw, 1.75rem);
+  font-size: clamp(1.375rem, 2.125vw, 2.125rem);
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.015em;
@@ -96,7 +117,7 @@
 }
 
 .v4-panel__tagline {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   line-height: 1.6;
   color: inherit;
   opacity: 0.6;
